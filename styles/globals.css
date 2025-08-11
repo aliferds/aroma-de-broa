@@ -1,3 +1,6 @@
+/* ESTILOS PADARIA AROMA DE BROA */
+
+/* ====================== ANTIALISED ================================= */
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +8,10 @@
   -webkit-box-sizing: border-box;
 }
 
+/* ====================== VARIAVEIS ================================= */
+
 :root {
-  --cocoa: rgba(65,41,32, 1);
+  --cocoa: #412920ff;
   --cocoa_opacity: rgba(65, 41, 32, 0.7);
   --cafe_com_leite: #A9846A;
   --pale_sand: #FFECC6;
@@ -14,6 +19,8 @@
   --foreground: var(--cocoa);
   --background: var(--pale_sand);
 }
+
+/* ====================== GLOBAL ================================= */
 
 body {
   color: var(--foreground);
@@ -30,11 +37,12 @@ main {
 }
 section {
   padding: 0 0 100px 0; 
+  height: 80vh;
 }
-.interface {
-  max-width: 1280px;
-  padding: 0 150px;
-}
+
+
+/* ====================== NAVBAR ================================= */
+
 .header {
   background-color: var(--cocoa);
   top: 0;
@@ -42,27 +50,61 @@ section {
   position: sticky;
   z-index: 99;
 }
+.header.scrooled {
+  color: transparent;
+}
+
 .navbar {
+  max-width: 980px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: var(--cocoa);
   caret-color: transparent;
+  transition: max-width 0.5s ease-in-out;
 }
-.navbar ul {
+
+
+.navbar .nav-items {
   display: flex;
   align-items: center;
 }
 .nav-link {
   text-decoration: none;
   color: white;
-  font-wheight: 900;
   padding: 1rem;
+  transition: color 0.3s ease-out;
+}
+
+.nav-item.active .nav-link {
+  color: var(--pale_sand);
 }
 
 .nav-link:hover {
   color: var(--pale_sand);
 }
+.nav-item {
+  position: relative;
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: var(--pale_sand);
+  transition: width 0.3s ease-out, background-color 0.3s ease-out;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.nav-item.active::after {
+    width: 70%;
+}
+
+/* ====================== LOGO ================================= */
 
 .logo {
   width: 100px;
@@ -77,6 +119,7 @@ section {
   opacity: 0.8;
 }
 
+/* ====================== UTEIS ================================= */
 
 .capitalize {
   text-transform: capitalize;
@@ -86,18 +129,24 @@ section {
   text-transform: uppercase;
 }
 
+.interface {
+  max-width: 1280px;
+  padding: 0 150px;
+}
+
+/* =================== CARROSSEL DE IMAGENS ========================= */
+
 .carousel-container {
     position: relative;
     max-width: 1200px;
 }
 
-/* Wrapper para os slides, esconde os slides que não estão ativos */
 .carousel-slide-wrapper {
     display: flex;
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: auto; /* A altura se ajusta ao conteúdo */
+    height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -108,12 +157,10 @@ section {
     display: none;
 }
 
-/* Mostra apenas o slide ativo */
 .slide.active {
     display: block;
 }
 
-/* Estilos para a imagem dentro do slide */
 .slide img {
     width: 100%;
     height: auto;
@@ -140,7 +187,6 @@ section {
   background-color: var(--cocoa);
 }
 
-/* Estilos para os botões de navegação */
 .prev-btn, .next-btn {
     position: absolute;
     caret-color: transparent;
@@ -168,6 +214,8 @@ section {
 .next-btn {
     right: 20px;
 }
+
+/* ====================== FOOTER ================================= */
 
 footer {
   min-height: 20vh;
