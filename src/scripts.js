@@ -1,5 +1,8 @@
+import { navbarMenu } from "./navbar/scripts.js";
+
 document.addEventListener("DOMContentLoaded", () => {
     caroussel();
+    navbarMenu();
 });
 
 function caroussel() {
