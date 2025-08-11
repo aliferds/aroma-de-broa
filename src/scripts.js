@@ -1,8 +1,10 @@
-import { navbarMenu } from "./navbar/scripts.js";
+import { navbarMenu } from "./navbar/desktop.js";
+import { mobileMenu } from "./navbar/mobile.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     caroussel();
     navbarMenu();
+    mobileMenu();
 });
 
 function caroussel() {

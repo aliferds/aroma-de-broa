@@ -23,22 +23,21 @@
         // TODO: deixar responsivo para aplicativos moveis 
       -->
       <nav class="navbar">
-        <div class="container"></div>
-        <div class="logo">
+        <div class="logo">  
           <!-- SVG gerado por IA -->
            <a href="/">
-            <img src="./public/assets/aroma_de_broa_logo.svg" alt="">
+            <img src="./public/assets/images/logo/aroma_de_broa_logo.svg" alt="Logo da padaria Aroma de Broa">
           </a>
         </div>
         <ul class="nav-items">
           <li class="nav-item">
-            <a href="#slider" class="nav-link uppercase">
+            <a href="#home" class="nav-link uppercase">
               inicio
             </a>
           </li>
           <li class="nav-item">
             <a href="#about" class="nav-link uppercase">
-              sobre nós
+              sobre
             </a>
           </li>
           <li class="nav-item">
@@ -52,30 +51,33 @@
             </a>
           </li>
         </ul>
+        <div class="container_carrinho">
+          <button class="carrinho"></button>
+        </div>
       </nav>
     </div>
   </header>
   <main>
     <div class="interface">
-      <section id="slider" class="slider">
+      <div id="slider" class="slider">
         <div class="carousel-container">
           <button class="prev-btn">&lt;</button>
 
           <div class="carousel-slide-wrapper">
               <div class="slide active">
-                  <img src="./public/assets/breads.png" alt="Foto de vários tipos de pães">
+                  <img src="./public/assets/images/slide/breads.png" alt="Foto de vários tipos de pães">
               </div>
               <div class="slide">
-                  <img src="./public/assets/cakes.png" alt="Foto de vários tipos de bolos">
+                  <img src="./public/assets/images/slide/cakes.png" alt="Foto de vários tipos de bolos">
               </div>
               <div class="slide">
-                  <img src="./public/assets/pizzas_and_burguers.png" alt="Foto de pizza e hamburgueres">
+                  <img src="./public/assets/images/slide/pizzas_and_burguers.png" alt="Foto de pizza e hamburgueres">
               </div>
               <div class="slide">
-                  <img src="./public/assets/snacks.png" alt="Foto de vários tipos de salgados">
+                  <img src="./public/assets/images/slide/snacks.png" alt="Foto de vários tipos de salgados">
               </div>
               <div class="slide">
-                  <img src="./public/assets/candies.png" alt="Foto de vários tipos de docinhos">
+                  <img src="./public/assets/images/slide/candies.png" alt="Foto de vários tipos de docinhos">
               </div>
           </div>
 
@@ -89,45 +91,157 @@
             <div class="slide_identification"></div>
           </div>
         </div>
-      </section>
-      <section class="presentation">
-        <h1>Aroma de Broa</h1>
+      </div>
+      <section class="presentation" id="home">
+        <h1 class="text-center title-space uppercase">Aroma de Broa</h1>
         <p>
           Localizada no coração de Franca, a Aroma de Broa é mais do que uma simples padaria: é um pedaço da história da cidade, com mais de 50 anos de tradição. Ao atravessar suas portas, você não só encontra pães, bolos e doces, mas também um ambiente que preserva a essência e o sabor da culinária artesanal de antigamente.
         </p>
+        <p>Assista ao vídeo abaixo para saber uma excelente receita de broa de milho!</p>
+        <div class="video">
+          <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/ACMkBFmKy1s?si=fz6jPH0zuoZD0auY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+          >
+          <p>Seu navegador não suporta iframes. Você pode assistir ao vídeo clicando no link abaixo:</p>
+          <a href="https://www.youtube.com/watch?v=ACMkBFmKy1s">Assistir no YouTube</a>
+          </iframe>
+        </div>
       </section>
       <section id="about">
-        <h2 class="uppercase">Sobre nós</h2>
-        <p>
-          No nosso nome já afirmamos a nossa maior especialidade: a broa de milho.
-          A receita, que acompanha a casa desde a sua fundação, é famosa por sua
-          textura macia e sabor inconfundível, que remete aos tempos da vovó. 
-          Mas o cardápio vai muito além. O pão francês, com sua casca crocante e
-          miolo macio, é um dos favoritos para o café da manhã. Já a variedade 
-          de bolos, como o de fubá e o de laranja, e os salgados, como as 
-          coxinhas e empadas, são perfeitos para um lanche da tarde.
-        </p>
-        <p>
-          Somos um ponto de encontro para as famílias francanas,
-          um lugar onde gerações se reúnem para saborear as delícias do dia a dia.
-          Há quem diga que a qualidade, o atendimento cordial e a atmosfera acolhedora 
-          nos transformaram em um verdadeiro patrimônio gastronômico da cidade.
-        </p>
+        <h2 class="uppercase text-center title-space">Sobre nós</h2>
+        <div class="colunas">
+          <div class="col1">
+            <p class="text-justify">
+              No nosso nome já afirmamos a nossa maior especialidade: a broa de milho.
+              A receita, que acompanha a casa desde a sua fundação, é famosa por sua
+              textura macia e sabor inconfundível, que remete aos tempos da vovó. 
+              Mas o cardápio vai muito além. O pão francês, com sua casca crocante e
+              miolo macio, é um dos favoritos para o café da manhã. Já a variedade 
+              de bolos, como o de fubá e o de laranja, e os salgados, como as 
+              coxinhas e empadas, são perfeitos para um lanche da tarde.
+            </p>
+            <p class="text-justify">
+              Somos um ponto de encontro para as famílias francanas,
+              um lugar onde gerações se reúnem para saborear as delícias do dia a dia.
+              Há quem diga que a qualidade, o atendimento cordial e a atmosfera acolhedora 
+              nos transformaram em um verdadeiro patrimônio gastronômico da cidade.
+            </p>
+          </div>
+          <div class="col2">
+            <figure>
+              <img src="./public/assets/images/photos/fachada.png" alt="Foto da fachada em 1975">
+              <figcaption class="text-center">Fachada da padaria em 1975</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
       <section id="products">
-        <h2 class="uppercase">Nossos produtos</h2>
+        <h2 class="uppercase title-space text-center">Nossos produtos</h2>
         <p></p>
         <!-- todo: trocar por cards de produtos -->
-        <ul>
-          <li>Pão francês</li>
-          <li>Croissant</li>
-          <li>Bolos</li>
-          <li>Salgados</li>
-          <li>Bebidas</li>
-        </ul>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Produto</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Pães</th>
+              <td>Pão francês</td>
+              <td>O clássico da padaria, com casca crocante e um miolo macio e aerado. Feito com farinha de alta qualidade e fermentação natural para um sabor inigualável.</td>
+              <td>R$15,00 / kg</td>
+            </tr>
+            <tr>
+              <th>Pães</th>
+              <td>Broa de milho</td>
+              <td>Nossa especialidade e carro-chefe. Uma receita tradicional de família, com uma textura úmida e sabor adocicado do milho. Perfeita para acompanhar um café coado na hora.</td>
+              <td>R$15,90 / kg</td>
+            </tr>
+            <tr>
+              <th>Pães</th>
+              <td>Croissant</td>
+              <td>Um clássico francês preparado com massa folhada, que desmancha na boca. Feito com manteiga de verdade, é perfeito para um café da manhã especial.</td>
+              <td>R$39,60</td>
+            </tr>
+            <tr>
+              <th>Bolos</th>
+              <td>Bolo de fubá</td>
+              <td>Um bolo caseiro e fofinho de fubá. Uma combinação de sabores que remete à infância.</td>
+              <td>R$20,00</td>
+            </tr>
+            <tr>
+              <th>Bolos</th>
+              <td>Bolo de chocolate</td>
+              <td>Um bolo caseiro feito com o melhor chocolate. Possui uma linda cobertura de ganachê.</td>
+              <td>R$22,00</td>
+            </tr>
+            <tr>
+              <th>Bolos</th>
+              <td>Bolo de cenoura</td>
+              <td>Bolo fofinho de cenoura com cobertura e recheio de chocolate.</td>
+              <td>R$24,00</td>
+            </tr>
+            <tr>
+              <th>Doces</th>
+              <td>Quindim</td>
+              <td>Uma joia da confeitaria brasileira. Feito com gemas frescas, coco ralado e muito açúcar, resulta em um doce com uma textura sedosa e sabor intenso.</td>
+              <td>R$ 7,50</td>
+            </tr>
+            <tr>
+              <th>Doces</th>
+              <td>Pudim</td>
+              <td>O tradicional pudim cremoso, com uma calda de caramelo brilhante e dourada. É a sobremesa perfeita para qualquer momento.</td>
+              <td>R$ 5,00</td>
+            </tr>
+            <tr>
+              <th>Salgados</th>
+              <td>Coxinha</td>
+              <td>A queridinha dos brasileiros! Massa de batata macia, recheada com frango desfiado suculento. Com opção cremosa com Catupiry original.</td>
+              <td>R$ 4,00</td>
+            </tr>
+            <tr>
+              <th>Salgados</th>
+              <td>Empada</td>
+              <td>Massa amanteigada e crocante, recheada com o sabor da sua escolha. O salgado ideal para um lanche rápido e saboroso. Sabores: carne seca, frango e palmito.</td>
+              <td>R$ 4,00</td>
+            </tr>
+            <tr>
+              <th>Salgados</th>
+              <td>Pastel</td>
+              <td>Massa sequinha e crocante, com bastante recheio e bem temperado. O salgado ideal para quem tem pressa. Sabores: frango, carne moída e presunto e mussarela.</td>
+              <td>R$ 4,00</td>
+            </tr>
+            <tr>
+              <th>Bebidas</th>
+              <td>Café</td>
+              <td>Preparado com grãos selecionados e moídos na hora. Um café quentinho, forte e aromático, que combina perfeitamente com qualquer item do nosso cardápio.</td>
+              <td>R$ 2,00</td>
+            </tr>
+            <tr>
+              <th>Bebidas</th>
+              <td>Chás</td>
+              <td>Preparado com folhas frescas. Um chá quente, forte e aromático, para o seu gosto. Sabores: camomila, boldo, canela e maçã.</td>
+              <td>R$ 3,00</td>
+            </tr>
+            <tr>
+              <th>Bebidas</th>
+              <td>Milkshake</td>
+              <td>Uma sobremesa cremosa e refrescante, perfeita para qualquer hora. Nosso milkshake é batido na hora com sorvete de alta qualidade e leite, resultando em uma textura aveludada e um sabor irresistível.</td>
+              <td>R$ 8,00</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <section>
-        <h2>Diferenciais</h2>
+        <h2 class="uppercase title-space text-center">Diferenciais</h2>
         <p>
           O grande segredo por trás dos 50 anos de sucesso da Aroma de Broa
           reside em seus diferenciais inegociáveis. A tradição é mantida 
@@ -147,13 +261,28 @@
         </ul>
       </section>
       <section id="contacts">
-        <h2>Informações e contatos</h2>
-        <p>Fique atento para o horário de funcionamento:</p>
-        <ol>
-          <li>Segunda a Sexta: 6h às 19h</li>
-          <li>Sábado: 6h às 18h</li>
-          <li>Domingo: 7h às 12h</li>
-        </ol>
+        <h2 class="uppercase title-space text-center">Informações e contatos</h2>
+        <p class="text-center title-space bold">Fique atento para o horário de funcionamento:</p>
+        <dl class="text-center">
+          <dt class="bold">
+            De segunda à sexta:
+          </dt>
+          <dd>
+            6h às 19h
+          </dd>
+          <dt class="bold">
+            Sábados:
+          </dt>
+          <dd>
+            6h às 18h
+          </dd>
+          <dt class="bold">
+            Domingos e feriados: 
+          </dt>
+          <dd>
+            7h às 12h
+          </dd>
+        </dl>
       </section>
     </div>
   </main>
@@ -161,11 +290,36 @@
     <span data-lang-key="credits">
       Criação e desenvolvimento por 
     </span>
-    <a href="https://github.com/aliferds">Alifer DS </a>
     <span>
+      <a href="https://github.com/aliferds">Alifer DS </a>
       &copy; 2025
     </span>
   </footer>
+
+  <nav class="mobileMenu" id="bottom-menu">
+    <ul class="mobile-items">
+      <li class="nav-item">
+        <a href="#slider" class="nav-link uppercase">
+          inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#about" class="nav-link uppercase">
+          sobre nós
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#products" class="nav-link uppercase">
+          produtos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#contacts" class="nav-link uppercase">
+          contatos
+        </a>
+      </li>
+    </ul>
+  </nav>
   <script src="./src/scripts.js" type="module"></script>
 </body>
 </html>
