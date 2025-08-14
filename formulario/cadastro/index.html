@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="shortcut icon" href="./public/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../public/assets/favicon.ico" type="image/x-icon">
   <title>Aroma de Broa</title>
   <meta name="description" content="Padaria Aroma de Broa é a melhor de Franca e região! Há mais de 50 anos entregando qualidade pra você!">
 
   <meta name="author" content="Alifer Duarte Silva">
 
   <link rel="stylesheet" href="../../styles/globals.css">
+  <link rel="stylesheet" href="../../styles/forms.css">
 </head>
 <body id="home">
   <!--[if lt IE 7]>
@@ -39,7 +40,7 @@
     <div class="interface">
       <section>
         <h1 class="uppercase">cadastro</h1>
-        <form action="">
+        <form action="post">
 
           <fieldset>
             <legend>Informações pessoais</legend>
@@ -61,7 +62,7 @@
 
           <fieldset>
             <legend>Informações de contato</legend>
-            <label for="">Telefone:</label>
+            <label for="telefone">Telefone:</label>
             <input 
               type="tel" 
               name="telefone" 
@@ -181,7 +182,7 @@
 
           <div>
             <input type="checkbox" name="temos" id="termos" required>
-            <label for="">Aceita os termos de uso</label>
+            <label for="termos">Aceita os termos de uso</label>
           </div>
 
           <input type="reset" value="limpar">
@@ -200,6 +201,5 @@
       &copy; 2025
     </span>
   </footer>
-  <script src="./src/scripts.js" type="module"></script>
 </body>
 </html>

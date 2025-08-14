@@ -266,8 +266,7 @@ nav.mobileMenu ul.mobile-items li.nav-item a.nav-link {
   width: 48px;
   height:48px;
   border-radius: 50%;
-  background-color: var(--cafe_com_leite);
-  border: 1px solid var(--cocoa);
+  background-color: var(--cocoa);
   background-image: url('../public/assets/images/icons/cesta_vazia.svg');
   background-size: 28px;
   background-repeat: no-repeat;
@@ -281,7 +280,7 @@ nav.mobileMenu ul.mobile-items li.nav-item a.nav-link {
 }
 
 .carrinho:hover {
-  background-color: var(--cocoa);
+  background-color: var(--cafe_com_leite);
 }
 
 /* ====================== LOGO ================================= */
@@ -448,6 +447,12 @@ footer a:hover {
 
 
 /* ====================== UTEIS ================================= */
+
+iframe.yt_video {
+  width: 560px;
+  height: 315px;
+  border: 0;
+}
 
 a.text-pale-sand:visited,
 a.text-pale-sand,

@@ -7,8 +7,12 @@ Na pasta styles, encontram-se os guias css para o site
 Na pasta src encontram-se os scripts que dá as interatividades e funcionalidades do site.
 Contém arquivo gitignore para não subir imagens e arquivos zip das tarefas para o github
 
-Foi adicionado uma tabela no lugar de uma ul list.
+Foi adicionado uma tabela no lugar de uma ul list para cardapio.
 Adicionado slider com fotos de produtos que teriam na padaria.
 Adicionado foto da "fachada" da padaria
 
 Todas as imagens foram geradas por IA.
+
+Adicionado as paginas de formulário.
+O cardápio foi estilizado para se parecer mais com um de verdade do que uma tabela.
+Adicionado links para as paginas de formlários.

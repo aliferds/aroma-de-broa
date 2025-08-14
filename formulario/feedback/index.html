@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="shortcut icon" href="./public/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../public/assets/favicon.ico" type="image/x-icon">
   <title>Aroma de Broa</title>
   <meta name="description" content="Padaria Aroma de Broa é a melhor de Franca e região! Há mais de 50 anos entregando qualidade pra você!">
 
   <meta name="author" content="Alifer Duarte Silva">
 
   <link rel="stylesheet" href="../../styles/globals.css">
+  <link rel="stylesheet" href="../../styles/forms.css">
 </head>
 <body id="home">
   <!--[if lt IE 7]>
@@ -39,7 +40,7 @@
     <div class="interface">
       <section>
         <h1 class="uppercase">feedback</h1>
-        <form action="" id="feedback">
+        <form action="post" id="feedback">
 
           <fieldset>
             <legend>Informações do cliente</legend>
@@ -54,33 +55,47 @@
               id="email" 
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             >
-            <div>
+          </fieldset>
+          <div>
 
-              <label for="produto">Produto:</label>
-              <select name="produto" id="produto">
-                <option value="">Pão francês</option>
-                <option value="">Croissaint</option>
-                <option value="">Broa</option>
-                <option value="">Bolo de fubá</option>
-                <option value="">Bolo de chocolate</option>
-                <option value="">Bolo de cenoura</option>
-                <option value="">Quindim</option>
-                <option value="">Pudim</option>
-                <option value="">Coxinha</option>
-                <option value="">Pastel</option>
-                <option value="">Empada</option>
-                <option value="">Café</option>
-                <option value="">Chás</option>
-                <option value="">Milkshake</option>
-              </select>
+            <label for="produto">Produto:</label>
+            <select name="produto" id="produto">
+              <option value="">Pão francês</option>
+              <option value="">Croissaint</option>
+              <option value="">Broa</option>
+              <option value="">Bolo de fubá</option>
+              <option value="">Bolo de chocolate</option>
+              <option value="">Bolo de cenoura</option>
+              <option value="">Quindim</option>
+              <option value="">Pudim</option>
+              <option value="">Coxinha</option>
+              <option value="">Pastel</option>
+              <option value="">Empada</option>
+              <option value="">Café</option>
+              <option value="">Chás</option>
+              <option value="">Milkshake</option>
+            </select>
 
-              <label for="nota">Avaliação:</label>
-              <input type="radio" name="nota" id="nata1">
-              <input type="radio" name="nota" id="nota2">
-              <input type="radio" name="nota" id="nota3">
-              <input type="radio" name="nota" id="nota4">
-              <input type="radio" name="nota" id="nota5">
-            </div>
+            <fieldset>
+              <legend>Avaliação:</legend>
+
+              <input type="radio" id="nota1" name="nota" value="1">
+              <label for="nota1">1</label>
+
+              <input type="radio" id="nota2" name="nota" value="2">
+              <label for="nota2">2</label>
+
+              <input type="radio" id="nota3" name="nota" value="3">
+              <label for="nota3">3</label>
+
+              <input type="radio" id="nota4" name="nota" value="4">
+              <label for="nota4">4</label>
+
+              <input type="radio" id="nota5" name="nota" value="5">
+              <label for="nota5">5</label>
+            </fieldset>
+
+          </div>
           <div>
             <label for="comentario">Comentario:</label>
             <textarea 
@@ -93,8 +108,8 @@
             </textarea>
           </div>
         
-        <input type="reset" value="limpar">
-        <input type="submit" value="enviar">
+          <input type="reset" value="limpar">
+          <input type="submit" value="enviar">
         </form>
       </section>
     </div>
@@ -108,6 +123,5 @@
       &copy; 2025
     </span>
   </footer>
-  <script src="./src/scripts.js" type="module"></script>
 </body>
 </html>
