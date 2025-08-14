@@ -33,7 +33,7 @@ export const navbarMenu = () => {
       const sectionHeight = currentSection.offsetHeight;
       const sectionTop = currentSection.offsetTop - navbarHeight; // Ajusta o topo da seção pelo navbar
       
-      if(header.offsetTop >= 672){
+      if(header.offsetTop >= 572){
         header.classList.add('scrooled');
         console.log('add');
       }else {
