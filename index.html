@@ -52,13 +52,13 @@
           </li>
         </ul>
         <div class="container_carrinho">
-          <button class="carrinho"></button>
+          <a class="carrinho" href="./formulario/pedido/"></a>
         </div>
       </nav>
     </div>
   </header>
   <main>
-    <div class="interface">
+    
       <div id="slider" class="slider">
         <div class="carousel-container">
           <button class="prev-btn">&lt;</button>
@@ -92,6 +92,7 @@
           </div>
         </div>
       </div>
+    <div class="interface">
       <section class="presentation" id="home">
         <h1 class="text-center title-space uppercase">Aroma de Broa</h1>
         <p>
@@ -140,105 +141,121 @@
       </section>
       <section id="products">
         <h2 class="uppercase title-space text-center">Nossos produtos</h2>
-        <p></p>
+        <p>Confira nosso cardápio:</p>
         <!-- todo: trocar por cards de produtos -->
 
         <table>
           <thead>
             <tr>
-              <th>Categoria</th>
-              <th>Produto</th>
-              <th>Descrição</th>
-              <th>Preço</th>
+              <th class="type">Categoria</th>
+              <th class="product">Produto</th>
+              <th class="description">Descrição</th>
+              <th class="price">Preço</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>Pães</th>
-              <td>Pão francês</td>
-              <td>O clássico da padaria, com casca crocante e um miolo macio e aerado. Feito com farinha de alta qualidade e fermentação natural para um sabor inigualável.</td>
-              <td>R$15,00 / kg</td>
+              <th class="type">Pães</th>
+              <td class="product">Pão francês</td>
+              <td class="description">O clássico da padaria, com casca crocante e um miolo macio e aerado. Feito com farinha de alta qualidade e fermentação natural para um sabor inigualável.</td>
+              <td class="price">R$ 15,00 / kg</td>
             </tr>
             <tr>
-              <th>Pães</th>
-              <td>Broa de milho</td>
-              <td>Nossa especialidade e carro-chefe. Uma receita tradicional de família, com uma textura úmida e sabor adocicado do milho. Perfeita para acompanhar um café coado na hora.</td>
-              <td>R$15,90 / kg</td>
+              <th class="type">Pães</th>
+              <td class="product">Broa de milho</td>
+              <td class="description">Nossa especialidade e carro-chefe. Uma receita tradicional de família, com uma textura úmida e sabor adocicado do milho. Perfeita para acompanhar um café coado na hora.</td>
+              <td class="price">R$ 15,90 / kg</td>
             </tr>
             <tr>
-              <th>Pães</th>
-              <td>Croissant</td>
-              <td>Um clássico francês preparado com massa folhada, que desmancha na boca. Feito com manteiga de verdade, é perfeito para um café da manhã especial.</td>
-              <td>R$39,60</td>
+              <th class="type">Pães</th>
+              <td class="product">Croissant</td>
+              <td class="description">Um clássico francês preparado com massa folhada, que desmancha na boca. Feito com manteiga de verdade, é perfeito para um café da manhã especial.</td>
+              <td class="price">R$ 39,60</td>
             </tr>
             <tr>
-              <th>Bolos</th>
-              <td>Bolo de fubá</td>
-              <td>Um bolo caseiro e fofinho de fubá. Uma combinação de sabores que remete à infância.</td>
-              <td>R$20,00</td>
+              <th class="type">Bolos</th>
+              <td class="product">Bolo de fubá</td>
+              <td class="description">Um bolo caseiro e fofinho de fubá. Uma combinação de sabores que remete à infância.</td>
+              <td class="price">R$ 20,00</td>
             </tr>
             <tr>
-              <th>Bolos</th>
-              <td>Bolo de chocolate</td>
-              <td>Um bolo caseiro feito com o melhor chocolate. Possui uma linda cobertura de ganachê.</td>
-              <td>R$22,00</td>
+              <th class="type">Bolos</th>
+              <td class="product">Bolo de chocolate</td>
+              <td class="description">Um bolo caseiro feito com o melhor chocolate. Possui uma linda cobertura de ganachê.</td>
+              <td class="price">R$ 22,00</td>
             </tr>
             <tr>
-              <th>Bolos</th>
-              <td>Bolo de cenoura</td>
-              <td>Bolo fofinho de cenoura com cobertura e recheio de chocolate.</td>
-              <td>R$24,00</td>
+              <th class="type">Bolos</th>
+              <td class="product">Bolo de cenoura</td>
+              <td class="description">Bolo fofinho de cenoura com cobertura e recheio de chocolate.</td>
+              <td class="price">R$ 24,00</td>
             </tr>
             <tr>
-              <th>Doces</th>
-              <td>Quindim</td>
-              <td>Uma joia da confeitaria brasileira. Feito com gemas frescas, coco ralado e muito açúcar, resulta em um doce com uma textura sedosa e sabor intenso.</td>
-              <td>R$ 7,50</td>
+              <th class="type">Doces</th>
+              <td class="product">Quindim</td>
+              <td class="description">Uma joia da confeitaria brasileira. Feito com gemas frescas, coco ralado e muito açúcar, resulta em um doce com uma textura sedosa e sabor intenso.</td>
+              <td class="price">R$ 7,50</td>
             </tr>
             <tr>
-              <th>Doces</th>
-              <td>Pudim</td>
-              <td>O tradicional pudim cremoso, com uma calda de caramelo brilhante e dourada. É a sobremesa perfeita para qualquer momento.</td>
-              <td>R$ 5,00</td>
+              <th class="type">Doces</th>
+              <td class="product">Pudim</td>
+              <td class="description">O tradicional pudim cremoso, com uma calda de caramelo brilhante e dourada. É a sobremesa perfeita para qualquer momento.</td>
+              <td class="price">R$ 5,00</td>
             </tr>
             <tr>
-              <th>Salgados</th>
-              <td>Coxinha</td>
-              <td>A queridinha dos brasileiros! Massa de batata macia, recheada com frango desfiado suculento. Com opção cremosa com Catupiry original.</td>
-              <td>R$ 4,00</td>
+              <th class="type">Salgados</th>
+              <td class="product">Coxinha</td>
+              <td class="description">A queridinha dos brasileiros! Massa de batata macia, recheada com frango desfiado suculento. Com opção cremosa com Catupiry original.</td>
+              <td class="price">R$ 4,00</td>
             </tr>
             <tr>
-              <th>Salgados</th>
-              <td>Empada</td>
-              <td>Massa amanteigada e crocante, recheada com o sabor da sua escolha. O salgado ideal para um lanche rápido e saboroso. Sabores: carne seca, frango e palmito.</td>
-              <td>R$ 4,00</td>
+              <th class="type">Salgados</th>
+              <td class="product">Empada</td>
+              <td class="description">Massa amanteigada e crocante, recheada com o sabor da sua escolha. O salgado ideal para um lanche rápido e saboroso. Sabores: carne seca, frango e palmito.</td>
+              <td class="price">R$ 4,00</td>
             </tr>
             <tr>
-              <th>Salgados</th>
-              <td>Pastel</td>
-              <td>Massa sequinha e crocante, com bastante recheio e bem temperado. O salgado ideal para quem tem pressa. Sabores: frango, carne moída e presunto e mussarela.</td>
-              <td>R$ 4,00</td>
+              <th class="type">Salgados</th>
+              <td class="product">Pastel</td>
+              <td class="description">Massa sequinha e crocante, com bastante recheio e bem temperado. O salgado ideal para quem tem pressa. Sabores: frango, carne moída e presunto e mussarela.</td>
+              <td class="price">R$ 4,00</td>
             </tr>
             <tr>
-              <th>Bebidas</th>
-              <td>Café</td>
-              <td>Preparado com grãos selecionados e moídos na hora. Um café quentinho, forte e aromático, que combina perfeitamente com qualquer item do nosso cardápio.</td>
-              <td>R$ 2,00</td>
+              <th class="type">Bebidas</th>
+              <td class="product">Café</td>
+              <td class="description">Preparado com grãos selecionados e moídos na hora. Um café quentinho, forte e aromático, que combina perfeitamente com qualquer item do nosso cardápio.</td>
+              <td class="price">R$ 2,00</td>
             </tr>
             <tr>
-              <th>Bebidas</th>
-              <td>Chás</td>
-              <td>Preparado com folhas frescas. Um chá quente, forte e aromático, para o seu gosto. Sabores: camomila, boldo, canela e maçã.</td>
-              <td>R$ 3,00</td>
+              <th class="type">Bebidas</th>
+              <td class="product">Chás</td>
+              <td class="description">Preparado com folhas frescas. Um chá quente, forte e aromático, para o seu gosto. Sabores: camomila, boldo, canela e maçã.</td>
+              <td class="price">R$ 3,00</td>
             </tr>
             <tr>
-              <th>Bebidas</th>
-              <td>Milkshake</td>
-              <td>Uma sobremesa cremosa e refrescante, perfeita para qualquer hora. Nosso milkshake é batido na hora com sorvete de alta qualidade e leite, resultando em uma textura aveludada e um sabor irresistível.</td>
-              <td>R$ 8,00</td>
+              <th class="type">Bebidas</th>
+              <td class="product">Milkshake</td>
+              <td class="description">Uma sobremesa cremosa e refrescante, perfeita para qualquer hora. Nosso milkshake é batido na hora com sorvete de alta qualidade e leite, resultando em uma textura aveludada e um sabor irresistível.</td>
+              <td class="price">R$ 8,00</td>
             </tr>
           </tbody>
         </table>
+        <p class="text-center margin">Para fazer um pedido clique no botão abaixo para preencher nosso formulário:</p>
+        <a href="./formulario/pedido/" class="w-full hover-link no-decoration text-cocoa">
+          <div class="flex-center">
+            <div class="cocoa-btn w-fit uppercase">
+              Fazer pedido
+            </div>
+          </div>
+        </a>
+        <p class="text-center margin">Já é um de nossos clientes? Nos ajude a melhorar nos avaliando.</p>
+        <a href="./formulario/feedback/" class="w-full hover-link no-decoration text-cocoa">
+          <div class="flex-center">
+            <div class="cocoa-btn w-fit uppercase">
+              Fazer avaliação
+            </div>
+          </div>
+        </a>
       </section>
       <section>
         <h2 class="uppercase title-space text-center">Diferenciais</h2>
@@ -262,6 +279,22 @@
       </section>
       <section id="contacts">
         <h2 class="uppercase title-space text-center">Informações e contatos</h2>
+        <p class="text-center margin">Precisa de informações gerais, tem sugestões, reclamações, elogios ou quer entrar em contato conosco? Clique no botão abaixo e entre em contato conosco agora mesmo!</p>
+        <a href="./formulario/contato/" class="w-full hover-link no-decoration text-cocoa">
+          <div class="flex-center">
+            <div class="cocoa-btn w-fit uppercase">
+              Entrar em contato
+            </div>
+          </div>
+        </a>
+        <p class="text-center margin">É nosso cliente ou quer receber informações sobre nossos produtos? Clique no botão abaixo e se cadastre.</p>
+        <a href="./formulario/cadastro/" class="w-full hover-link no-decoration text-cocoa">
+          <div class="flex-center">
+            <div class="cocoa-btn w-fit uppercase">
+              Cadastrar
+            </div>
+          </div>
+        </a>
         <p class="text-center title-space bold">Fique atento para o horário de funcionamento:</p>
         <dl class="text-center">
           <dt class="bold">
@@ -305,7 +338,7 @@
       </li>
       <li class="nav-item">
         <a href="#about" class="nav-link uppercase">
-          sobre nós
+          sobre
         </a>
       </li>
       <li class="nav-item">

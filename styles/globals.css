@@ -15,14 +15,17 @@
   --cocoa_opacity: rgba(65, 41, 32, 0.7);
   --cafe_com_leite: #A9846A;
   --pale_sand: #FFECC6;
+  --white: #f4f4f4;
 
   --foreground: var(--cocoa);
   --background: var(--pale_sand);
 
+  /* breakpoints
   --bp-smartphones: 480px;
   --bp-tablet: 768px;
   --bp-laptops: 1279px;
-  --bp-largeScreen: 1280px;
+  --bp-largeScreen: 1280px; 
+  */
 
   --menuMobile: 72px;
 }
@@ -79,20 +82,23 @@ table {
   text-align: center;
 }
 
-th, td {
+
+
+/* th, td {
   border: 1px solid var(--cocoa);
   padding: 10px;
-}
+} */
 
 /* ====================== NAVBAR ================================= */
 
 
 .header {
-  background-color: var(--cocoa);
+  /* background-color: var(--pale_sand) */
 }
 
 .navbar{
   display: flex;
+  background-color: var(--pale_sand);
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -108,7 +114,7 @@ th, td {
 
 .nav-link {
   text-decoration: none;
-  color: white;
+  color: var(--cocoa);
   padding: 1rem;
   font-size: 1rem;
   width: 100%;
@@ -120,6 +126,9 @@ th, td {
   .nav-itens {
     width: 100%;
     display: block;
+  }
+  .navbar {
+    box-shadow: 2px 2px 10px 2px var(--cocoa), -2px 0 2px var(--cocoa);
   }
   .nav-link {
     padding: 1rem;
@@ -142,9 +151,7 @@ th, td {
   
   .navbar {
     max-width: 980px;
-    background-color: var(--cocoa);
     caret-color: transparent;
-    transition: max-width 0.5s ease-in-out;
   }
   
   
@@ -158,11 +165,11 @@ th, td {
     font-size: 0.7rem;
   }
   .nav-item.active .nav-link {
-    color: var(--pale_sand);
+    color: var(--cocoa);
   }
   
   .nav-link:hover {
-    color: var(--pale_sand);
+    color: var(--cafe_com_leite);
   }
   .nav-item {
     position: relative;
@@ -175,7 +182,7 @@ th, td {
     transform: translateX(-50%);
     width: 0;
     height: 3px;
-    background-color: var(--pale_sand);
+    background-color: var(--cocoa);
     transition: width 0.3s ease-out, background-color 0.3s ease-out;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
@@ -200,7 +207,7 @@ nav.mobileMenu {
   bottom: -60px;
   height: var(--menuMobile);
   width: 100%;
-  background-color: var(--cocoa);
+  background-color: var(--pale_sand);
   z-index: 99;
   transition: all 0.3s ease;
 }
@@ -214,7 +221,7 @@ nav.mobileMenu ul.mobile-items {
 nav.mobileMenu ul.mobile-items li.nav-item {
   width: 100%;
   padding: 0;
-  border: 2px solid var(--pale_sand);
+  border: 2px solid var(--cafe_com_leite);
 }
 
 nav.mobileMenu ul.mobile-items li.nav-item a.nav-link {
@@ -241,24 +248,18 @@ nav.mobileMenu ul.mobile-items li.nav-item a.nav-link {
   display: flex;
 }
 
-@media(max-width: 480px) {
-  .container_carrinho{
-    width: 100%;
-    width: fit-content;
-    display: inline;
-  }
-}
-
 .carrinho {
   width: 48px;
   height:48px;
   border-radius: 50%;
-  border: 1px solid var(--pale_sand);
-  background-color: transparent;
+  background-color: var(--cafe_com_leite);
+  border: 1px solid var(--cocoa);
   background-image: url('../public/assets/images/icons/cesta_vazia.svg');
   background-size: 28px;
   background-repeat: no-repeat;
   background-position: center;
+  transition: background-color 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .carrinho.items {
@@ -266,10 +267,7 @@ nav.mobileMenu ul.mobile-items li.nav-item a.nav-link {
 }
 
 .carrinho:hover {
-  outline-style: solid;
-  outline-width: 2px;
-  outline-color: var(--pale_sand);
-  cursor: pointer;
+  background-color: var(--cocoa);
 }
 
 /* ====================== LOGO ================================= */
@@ -292,7 +290,7 @@ nav.mobileMenu ul.mobile-items li.nav-item a.nav-link {
 
 .carousel-container {
     position: relative;
-    max-width: 1200px;
+    width: 100%;
 }
 
 .carousel-slide-wrapper {
@@ -306,7 +304,6 @@ nav.mobileMenu ul.mobile-items li.nav-item a.nav-link {
 
 .slide {
     min-width: 100%;
-    border: 5px solid var(--cocoa);
     transition: transform 0.5s linear;
     display: none;
 }
@@ -438,6 +435,34 @@ footer a:hover {
 
 /* ====================== UTEIS ================================= */
 
+a.text-pale-sand:visited,
+a.text-pale-sand,
+.text-pale-sand {
+  color: var(--pale_sand);
+}
+
+.margin {
+  margin: 1rem;
+}
+
+a.text-cocoa:visited,
+a.text-cocoa,
+.text-cocoa {
+  color: var(--cocoa);
+}
+
+a.no-decoration {
+  text-decoration: none;
+}
+
+a.hover-link {
+  transition: color 0.5s ease-in-out;
+}
+
+a.hover-link:hover {
+  color: var(--cafe_com_leite)
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -473,12 +498,24 @@ a.text-center {
   text-align: justify;
 }
 
+a.w-full,
 .w-full {
   width: 100%;
 }
 
+.w-fit {
+  width: fit-content;
+  padding: 1rem;
+}
+
 .h-full {
   height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media(min-width: 480px) and (max-width: 768px) {
@@ -498,4 +535,69 @@ a.text-center {
     max-width: 1280px;
     padding: 0 175px;
   }
+}
+
+/* ======================= Botoes ================================= */
+
+.cocoa-btn {
+  border: 2px solid var(--cocoa);
+  border-radius: 20px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.cocoa-btn:hover {
+  background-color: var(--cocoa);
+}
+
+/* ======================= CARDAPIO ================================= */
+
+table {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+thead tr:first-child {
+  border-top: 2px solid var(--cocoa);
+}
+
+tr {
+  display: grid;
+  grid-template-areas:
+  "type product"
+  "description description"
+  ". price";
+  padding: 1rem 0.5rem;
+  border-bottom: 2px dotted var(--cocoa);
+  border-right: 2px solid var(--cocoa);
+  border-left: 2px solid var(--cocoa);
+}
+
+tr:last-child {
+  border-bottom: 2px solid var(--cocoa);
+}
+
+.type {
+  grid-area: type;
+  background-color: var(--cocoa);
+  color: var(--cafe_com_leite);
+  border-radius: 1rem;
+  width: 100px;
+}
+
+.product {
+  grid-area: product;
+  font-weight: 900;
+  text-align: center;
+}
+
+.description {
+  grid-area: description;
+  text-align: justify;
+  color: var(--cafe_com_leite);
+}
+
+.price {
+  grid-area: price;
+  font-weight: 900;
+  text-align: end;
 }

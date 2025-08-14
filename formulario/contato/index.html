@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./public/assets/favicon.ico" type="image/x-icon">
+  <title>Aroma de Broa</title>
+  <meta name="description" content="Padaria Aroma de Broa é a melhor de Franca e região! Há mais de 50 anos entregando qualidade pra você!">
+
+  <meta name="author" content="Alifer Duarte Silva">
+
+  <link rel="stylesheet" href="../../styles/globals.css">
+</head>
+<body id="home">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">Se você está usando um navegador <strong>antigo</strong>. Por favor <a href="#">use um navegador mais atualizado</a> para melhorar sua experiência</p>
+  <![endif]-->
+  <header class="header">
+    <div class="interface">
+      <nav class="navbar">
+        <a 
+          href="../../"
+          class="text-cocoa uppercase no-decoration"
+        >
+          &larr; voltar
+        </a>
+        <div class="logo">  
+          <!-- SVG gerado por IA -->
+           <a href="/">
+            <img src="../../public/assets/images/logo/aroma_de_broa_logo.svg" alt="Logo da padaria Aroma de Broa">
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="interface">
+      <section>
+        <h1 class="uppercase">contato</h1>
+        <form action="" id="contact">
+
+          <fieldset>
+            <legend>Informações do cliente</legend>
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input 
+              type="email" 
+              name="email" 
+              id="email" 
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required
+            >
+
+            <label for="tel">Telefone:</label>
+            <input 
+              type="text" 
+              name="tel" 
+              id="tel" 
+              maxlength="11"
+              pattern="(\([0-9]{2}\)) \s([9]{1})?([0-9]{4})-([0-9]{4})" 
+            >
+          </fieldset>
+          <fieldset>
+            <legend>Assunto</legend>
+
+            <input type="radio" name="assunto" id="informacoes" checked>
+            <label for="informacoes">Informações gerais</label>
+
+            <input type="radio" name="assunto" id="reclamacao">
+            <label for="reclamação">Reclamação</label>
+
+            <input type="radio" name="assunto" id="sugestao">
+            <label for="sugestao">Sugestão</label>
+
+
+            <input type="radio" name="assunto" id="elogio">
+            <label for="elogios">Elogio</label>
+
+
+            <input type="radio" name="assunto" id="pedido">
+            <label for="pedido">Pedido especial</label>
+
+
+            <input type="radio" name="assunto" id="outros">
+            <label for="outros">Outros</label>
+          </fieldset>
+
+          <textarea 
+            name="mensagem" 
+            id="mensagem" 
+            rows="10"
+            required
+            form="contact"
+          >
+          </textarea>
+        
+          <input type="reset" value="limpar">
+          <input type="submit" value="enviar">
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <span data-lang-key="credits">
+      Criação e desenvolvimento por 
+    </span>
+    <span>
+      <a href="https://github.com/aliferds">Alifer DS </a>
+      &copy; 2025
+    </span>
+  </footer>
+  <script src="./src/scripts.js" type="module"></script>
+</body>
+</html>
