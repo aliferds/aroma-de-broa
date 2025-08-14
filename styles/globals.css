@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 
 /* ====================== VARIAVEIS ================================= */
@@ -42,7 +41,7 @@ body {
 
 @media(max-width: 768px) {
   body {
-    margin-bottom: var(--menuMobile);
+    margin-bottom: 72px;
   }
 }
 
@@ -206,10 +205,10 @@ table {
   }
 }
 nav.mobileMenu {
-  display: relative;
+  display: inline-block;
   position: fixed;
   bottom: -60px;
-  height: var(--menuMobile);
+  height: 72px;
   width: 100%;
   background-color: var(--pale_sand);
   box-shadow: 2px 0 10px 2px var(--cocoa), -2px 0 2px var(--cocoa);
