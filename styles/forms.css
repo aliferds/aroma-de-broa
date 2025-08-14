@@ -1,0 +1,90 @@
+@import "./globals.css";
+
+
+form {
+  box-shadow: 0 2px 2px 2px var(--cocoa);
+  padding: 1rem;
+}
+
+legend {
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+input, textarea {
+  background-color: var(--pale_sand);
+  transition: background-color 0.5s linear;
+}
+
+input {
+  border: 1px solid var(--cocoa);
+}
+input:focus {
+  background-color: var(--white);
+  outline: none;
+}
+
+
+.form-btns {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+}
+
+.form-btns input[type="reset"] {
+  margin-right: 1rem;
+}
+
+input[type="reset"],
+input[type="submit"] {
+  background-color: var(--cocoa);
+  padding: 1rem;
+  border: 0;
+  border-radius: 20px;
+  width: 100px;
+  color: var(--pale_sand);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  color: var(--cafe_com_leite);
+}
+
+fieldset {
+  border: 1px solid var(--cocoa);
+}
+
+fieldset fieldset {
+  border-right: 0;
+  border-left: 0;
+}
+
+.qtd {
+  width: 70px;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid var(--cocoa);
+}
+
+textarea:focus {
+  outline: none;
+  background-color: var(--white);
+}
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-cocoa.back {
+  transition: color 0.5s ease-in-out;
+}
+.text-cocoa.back:hover {
+  color: var(--cafe_com_leite);
+}
