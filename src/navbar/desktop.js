@@ -32,10 +32,16 @@ export const navbarMenu = () => {
     sections.forEach(currentSection => {
       const sectionHeight = currentSection.offsetHeight;
       const sectionTop = currentSection.offsetTop - navbarHeight; // Ajusta o topo da seção pelo navbar
-
-
+      
+      if(header.offsetTop >= 672){
+        header.classList.add('scrooled');
+        console.log('add');
+      }else {
+        console.log('remove');
+        header.classList.remove('scrooled');
+      }
+      
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight - 50) {
-        header.classList.toggle('scrooled');
         navLinks.forEach(link => link.parentElement.classList.remove('active'));
 
         // Encontra o link correspondente à seção ativa

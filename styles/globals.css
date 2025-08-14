@@ -148,10 +148,13 @@ table {
   .header.scrooled {
     color: transparent;
   }
+
+  .header.scrooled .navbar {
+    box-shadow: 2px 2px 10px 2px var(--cocoa), -2px 0 2px var(--cocoa);
+  }
   
   .navbar {
     max-width: 980px;
-    box-shadow: 2px 2px 10px 2px var(--cocoa), -2px 0 2px var(--cocoa);
     caret-color: transparent;
   }
   
