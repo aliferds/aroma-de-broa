@@ -35,9 +35,9 @@ export const navbarMenu = () => {
       
       if(header.offsetTop >= 572){
         header.classList.add('scrooled');
-        console.log('add');
+        // console.log('add');
       }else {
-        console.log('remove');
+        // console.log('remove');
         header.classList.remove('scrooled');
       }
       

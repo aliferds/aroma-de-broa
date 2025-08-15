@@ -13,8 +13,6 @@ export const mobileMenu = () => {
 
         if (scrollPosition < contentHeight) {
             bottomMenu.classList.add('visible');
-        } else {
-            bottomMenu.classList.remove('visible');
         }
     });
 }
