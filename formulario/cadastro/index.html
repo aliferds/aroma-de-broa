@@ -18,7 +18,7 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">Se você está usando um navegador <strong>antigo</strong>. Por favor <a href="#">use um navegador mais atualizado</a> para melhorar sua experiência</p>
   <![endif]-->
-  <header class="header">
+  <header>
     <div class="interface">
       <nav class="navbar">
         <a 
@@ -39,18 +39,21 @@
   <main>
     <div class="interface">
       <section>
-        <h1 class="uppercase">cadastro</h1>
         <form action="post">
+          <h1 class="uppercase margin">formulário de cadastro</h1>
+          <p class="margin"><span class="bold">Atenção:</span> todos os campos são obrigatórios com exceção aqueles que estão sinalizados com <span class="opcional">(opcional)</span>.</p>
 
           <fieldset>
             <legend>Informações pessoais</legend>
-
-            <label for="nome">Nome completo:</label>
-            <input 
+            
+            <div class="input-adb flex flex-align-center">
+              <input 
               type="text"
               name="nome"
               id="nome"
               required>
+              <label for="nome">Nome completo</label>
+            </div>
 
             <label for="nascimento">Data de nascimento:</label>
             <input 
@@ -62,132 +65,189 @@
 
           <fieldset>
             <legend>Informações de contato</legend>
-            <label for="telefone">Telefone:</label>
-            <input 
+            <div class="input-adb flex flex-align-center">
+              <input 
               type="tel" 
               name="telefone" 
               id="telefone" 
-              placeholder=""
               maxlength="11"
-              pattern="(\([0-9]{2}\)) \s([9]{1})?([0-9]{4})-([0-9]{4})" 
-              required>
-
-            <label for="email">e-mail:</label>
-            <input 
+              pattern="([0-9]{10, 11})" 
+              required="required">
+              <label for="telefone">Telefone</label>
+            </div>
+            
+            
+            <div class="input-adb flex flex-align-center">
+              <input 
               type="email" 
               name="email" 
               id="email"
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-              placeholder="seu_email@exemplo.com" 
               required>
+              <label for="email">e-mail</label>
+            </div>
           </fieldset>
-
+          
           <fieldset>
             <legend>Endereço</legend>
             <div>
-              <label for="rua">Rua/Logadrouro:</label>
-              <input type="text" name="rua" id="rua" required>
-
-              <label for="numero">Nº:</label>
-              <input type="number" name="numero" id="numero" required>
-
-              <label for="bairro">Bairro:</label>
-              <input type="text" name="bairro" id="bairro" required>
+              <div class="input-adb flex flex-align-center">
+                <input type="text" name="rua" id="rua" required>
+                <label for="rua">Endereço</label>
+              </div>
+              
+              <div class="input-adb number flex flex-align-center">
+                <input type="text" name="numero" id="numero" required>
+                <label for="numero">Nº</label>
+              </div>
+              <div class="input-adb flex flex-align-center">
+                <input type="text" name="bairro" id="bairro" required>
+                <label for="bairro">Bairro</label>
+              </div>
+              
+              <div class="input-adb flex flex-align-center cep">
+                <input 
+                type="text" 
+                name="cep" 
+                id="cep" 
+                maxlength="8"
+                pattern="[0-9]{5}-[0-9]{3}"
+                required>
+                <label for="cep">CEP</label>
+              </div>
             </div>
-
-            <label for="cep">CEP:</label>
-            <input 
-              type="text" 
-              name="cep" 
-              id="cep" 
-              maxlength="8"
-              pattern="[0-9]{5}-[0-9]{3}"
-              required>
-
-            <label for="complemento">Complemento:</label>
-            <input type="text" name="complemento" id="complemento">
+            
+            
+            <div class="input-adb flex flex-align-center complemento">
+              <input type="text" name="complemento" id="complemento">
+              <label for="complemento">Complemento <span class="opcional">(opcional)</span></label>
+            </div>
           </fieldset>
 
-          <fieldset>
-            <legend>Produtos</legend>
+          <fieldset class="register_products">
+            <legend>Produtos que tem interesse</legend>
+            <p class="text-center">Selecione pelo menos um produto</p>
 
-            <fieldset>
-              <legend>Pães</legend>
 
-              <input type="checkbox" name="paofraces" id="paofrances">
-              <label for="paofrances">Pão francês</label>
+              <label for="paofrances">
+                <input type="checkbox" name="paofraces" id="paofrances">
+                <span>
+                  Pão francês
+                </span>
+              </label>
+              
+              <label for="broa">
+                <input type="checkbox" name="broa" id="broa">
+                <span>
+                  Broa
+                </span>
+              </label>
 
-              <input type="checkbox" name="broa" id="broa">
-              <label for="broa">Broa</label>
+              <label for="croissant">
+                <input type="checkbox" name="croissant" id="croissant">
+                <span>
+                  Croissant
+                </span>
+              </label>
 
-              <input type="checkbox" name="croissant" id="croissant">
-              <label for="croissant">Croissant</label>
-            </fieldset>
 
-            <fieldset>
-              <legend>Bolos</legend>
+              <label for="bolofuba">
+                <input type="checkbox" name="bolofuba" id="bolofuba">
+                <span>
+                  Bolo de fubá
+                </span>
+              </label>
 
-              <input type="checkbox" name="bolofuba" id="bolofuba">
-              <label for="bolofuba">Bolo de fubá</label>
+              <label for="bolochocolate">
+                <input type="checkbox" name="bolochocolate" id="bolochocolate">
+                <span>
+                  Bolo de chocolate
+                </span>
+              </label>
 
-              <input type="checkbox" name="bolochocolate" id="bolochocolate">
-              <label for="bolochocolate">Bolo de chocolate</label>
+              <label for="bolocenoura">
+                <input type="checkbox" name="bolocenoura" id="bolocenoura">
+                <span>
+                  Bolo de cenoura
+                </span>
+              </label>
 
-              <input type="checkbox" name="bolocenoura" id="bolocenoura">
-              <label for="bolocenoura">Bolo de cenoura</label>
-            </fieldset>
 
-            <fieldset>
-              <legend>Doces</legend>
+              <label for="quindim">
+                <input type="checkbox" name="quindim" id="quindim">
+                <span>
+                  Quindim
+                </span>
+              </label>
 
-              <input type="checkbox" name="quindim" id="quindim">
-              <label for="quindim">Quindim</label>
+              <label for="pudim">
+                <input type="checkbox" name="pudim" id="pudim">
+                <span>
+                  Pudim
+                </span>
+              </label>
 
-              <input type="checkbox" name="pudim" id="pudim">
-              <label for="pudim">Pudim</label>
-            </fieldset>
 
-            <fieldset>
-              <legend>Salgados</legend>
+              <label for="coxinha">
+                <input type="checkbox" name="coxinha" id="coxinha">
+                <span>
+                  Coxinha
+                </span>
+              </label>
 
-              <input type="checkbox" name="coxinha" id="coxinha">
-              <label for="coxinha">Coxinha</label>
+              <label for="pastel">
+                <input type="checkbox" name="pastel" id="pastel">
+                <span>
+                  Pastel
+                </span>
+              </label>
 
-              <input type="checkbox" name="pastel" id="pastel">
-              <label for="pastel">Pastel</label>
+              <label for="empada">
+                <input type="checkbox" name="empada" id="empada">
+                <span>
+                  Empada
+                </span>
+              </label>
 
-              <input type="checkbox" name="empada" id="empada">
-              <label for="empada">Empada</label>
-            </fieldset>
 
-            <fieldset>
-              <legend>Bebidas</legend>
+              <label for="cafe">
+                <input type="checkbox" name="cafe" id="cafe">
+                <span>
+                  Café
+                </span>
+              </label>
 
-              <input type="checkbox" name="cafe" id="cafe">
-              <label for="cafe">Café</label>
+              <label for="cha">
+                <input type="checkbox" name="cha" id="cha">
+                <span>
+                  Chás
+                </span>
+              </label>
 
-              <input type="checkbox" name="cha" id="cha">
-              <label for="cha">Chás</label>
-
-              <input type="checkbox" name="milkshake" id="milkshake">
-              <label for="milkshake">Milkshakes</label>
-            </fieldset>
+              <label for="milkshake">
+                <input type="checkbox" name="milkshake" id="milkshake">
+                <span>
+                  Milkshakes
+                </span>
+              </label>
 
           </fieldset>
 
-          <div>
-            <input type="checkbox" name="promocoes" id="promocoes">
-            <label for="promocoes">Aceita receber promoções</label>
+          <div class="margin flex flex-align-center">
+            <input class="interruptor" type="checkbox" name="promocoes" id="promocoes">
+            <label for="promocoes">Aceito receber promoções por e-mail. <span class="opcional">(opcional)</span>  </label>
           </div>
 
-          <div>
-            <input type="checkbox" name="temos" id="termos" required>
-            <label for="termos">Aceita os termos de uso</label>
+          <div class="margin flex flex-align-center">
+            <input class="interruptor" type="checkbox" name="temos" id="termos" required>
+            <label for="termos">Aceito os termos de uso e politíca de privacidade.</label>
           </div>
 
-          <input type="reset" value="limpar">
-
-          <input type="submit" value="enviar">
+          <div class="form-btns">
+            <input type="reset" value="limpar">
+            
+            <input type="submit" value="enviar">
+          </div>
         </form>
       </section>
     </div>

@@ -1,9 +1,16 @@
 @import "./globals.css";
 
 
+body {
+  margin: 0;
+  min-height: 100vh;
+  height: fit-content;
+}
+
 form {
   box-shadow: 0 2px 2px 2px var(--cocoa);
   padding: 1rem;
+  margin-bottom: 5rem;
 }
 
 legend {
@@ -16,13 +23,77 @@ legend {
 input, textarea {
   background-color: var(--pale_sand);
   transition: background-color 0.5s linear;
+  caret-color: var(--cocoa);
 }
 
 input {
   border: 1px solid var(--cocoa);
+  background-color: transparent;
 }
+
+
+div.input-adb {
+  height: 3rem;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+div.input-adb.number {
+  appearance: none;
+  width: 85px;
+}
+div.input-adb.cep {
+  width: 105px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number] {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+div.input-adb input {
+  width: 100%;
+  background: transparent;
+  color: var(--cocoa);
+  outline: none;
+  box-shadow: none;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  padding: 10px 0 5px 10px;
+  border: 1px solid var(--cocoa);
+  border-radius: 10px;
+}
+div.input-adb label {
+  position: absolute;
+  left: 0;
+  padding: 8px 10px 5px 10px;
+  color: var(--cafe_com_leite);
+  text-transform: uppercase;
+  pointer-eventer: none;
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+}
+
+/* div.input-adb input:placeholder ~ label, */
+div.input-adb input:focus ~ label,
+div.input-adb input:valid ~ label {
+  color: var(--cocoa);
+  background-color: var(--pale_sand);
+  border-radius: 10px;
+  padding: 2px;
+  margin-left: 10px;
+  transform: translateY(-0.5rem);
+  font-size: 0.65em;
+}
+
+
 input:focus {
-  background-color: var(--white);
+  background-color: transparent;
+  color: var(--white);
   outline: none;
 }
 
@@ -56,6 +127,7 @@ input[type="submit"]:hover {
 
 fieldset {
   border: 1px solid var(--cocoa);
+  padding: 1rem 0;
 }
 
 fieldset fieldset {
@@ -74,7 +146,6 @@ textarea {
 
 textarea:focus {
   outline: none;
-  background-color: var(--white);
 }
 
 .textarea-container {
@@ -86,5 +157,244 @@ textarea:focus {
   transition: color 0.5s ease-in-out;
 }
 .text-cocoa.back:hover {
+  color: var(--cafe_com_leite);
+}
+
+input[type="checkbox"].interruptor {
+  margin: 1rem;
+  position: relative;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  background-color: var(--pale_sand);
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"].interruptor:checked {
+  background-color: var(--cocoa);
+}
+
+input[type="checkbox"].interruptor::before {
+  position: absolute;
+  content: '';
+  left: calc(1.5rem - 1.6rem);
+  top: calc(1.5rem - 1.6rem);
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: var(--cafe_com_leite);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px var(--cocoa), 0 -1px 3px var(--cocoa);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"].interruptor:hover::before {
+  box-shadow: 0 0 0px 8px rgba(from var(--cocoa) r, g, b, 0.3); 
+}
+input[type="checkbox"].interruptor:checked:hover::before {
+  box-sizing: 0 0 0px 8px (from var(--cocoa) r, g, b, 0.3);
+}
+input[type="checkbox"].interruptor:checked::before {
+  transform: translateX(100%);
+}
+
+fieldset.register_products input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+fieldset.register_products label span {
+  border: 1px solid var(--cocoa);
+  border-radius: 20px;
+  padding: 0.2rem;
+  margin: 5rem 0;
+  position: inline-block;
+  cursor: pointer;
+  line-height: 1.8rem;
+}
+fieldset.register_products label span::selection {
+  background-color: transparent;
+  caret-color: transparent;
+}
+
+fieldset.register_products label input[type="checkbox"]:checked + span {
+    background-color: var(--cafe_com_leite); /* Cor de fundo azul quando marcado */
+    border-color: var(--cocoa);     /* Cor da borda também azul */
+    color: var(--white);               /* Texto branco */
+}
+
+.opcional {
+  color: var(--cafe_com_leite);
+}
+
+.modal {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: none;
+
+  z-index: 1000; 
+}
+
+.modal.open {
+  display: block;
+  align-items: center;
+}
+
+.modal form {
+  background-color: var(--pale_sand);
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 90%;
+  height: 90%;
+  overflow-y: auto;
+}
+
+.modal form fieldset {
+  padding: 0.5rem;
+}
+
+.carrousel_produtos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.carrousel_items {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.card_produto {
+  border: 1px solid var(--cocoa);
+  padding: 0.5rem;
+  border-radius: 10px;
+  position: relative;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+  "imagem imagem imagem"
+  "product product price"
+  "description description description"
+  "qtd qtd qtd";
+}
+
+.card_produto .relative {
+  grid-area: imagem;
+}
+
+.card_produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card_produto input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: end;
+}
+
+.card_produto input:focus {
+  color: var(--cocoa);
+}
+
+.card_produto .product_type {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--pale_sand);
+  background-color: var(--cocoa);
+  border-radius: 10px;
+  padding: 5px 5px;
+}
+.card_produto span.price {
+  grid-area: price;
+}
+
+.card_produto .product_description {
+  grid-area: description;
+  max-width: 280px;
+  color: var(--cafe_com_leite);
+  height: 50px;
+  text-align: justify;
+  font-size: 10px;
+  vertical-align: start;
+}
+
+.quantity {
+  grid-area: qtd;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quantity button {
+  width: 50px;
+}
+
+.quantity input {
+  width: 100px;
+  height: 1.2rem;
+  padding-right: 5px;
+  opacity: 1;
+  border: 1px solid var(--cocoa);
+  border-radius: 5px;
+  position: relative;
+}
+
+.quantity .remove {
+  background-color: var(--cocoa);
+  border-radius: 20px 0 0 20px;
+}
+
+.quantity .add {
+  background-color: var(--cocoa);
+  border-radius: 0 20px 20px 0;
+}
+
+.quantity .add,
+.quantity .remove {
+  border: none;
+  color: var(--white);
+  height: 1.2rem;
+}
+
+.card_produto label {
+  grid-area: product;
+  color: var(--cocoa);
+  wrap: no-wrap;
+  height: 1.5rem;
+}
+
+.btn-form {
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  color: var(--pale_sand);
+  background-color: var(--cocoa);
+}
+
+.btn-form:focus, 
+.btn-form:hover {
   color: var(--cafe_com_leite);
 }

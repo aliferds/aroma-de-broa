@@ -4,7 +4,6 @@ export const mobileMenu = () => {
     const main = document.querySelector('main');
     const footer = document.querySelector('footer');
 
-    const menuHeight = bottomMenu.offsetHeight;
 
     const contentHeight = header.offsetHeight + main.offsetHeight + footer.offsetHeight;
 

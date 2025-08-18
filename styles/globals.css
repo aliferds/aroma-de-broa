@@ -509,6 +509,10 @@ a.hover-link:hover {
   font-weight: bold;
 }
 
+.relative {
+  position: relative;
+}
+
 .text-center,
 h1.text-center,
 h2.text-center,
@@ -538,10 +542,22 @@ a.w-full,
   height: 100%;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-align-center {
+  align-items:center;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-col{
+  flex-direction: column;
 }
 
 @media(min-width: 480px) and (max-width: 768px) {
@@ -608,6 +624,7 @@ tr:last-child {
   color: var(--cafe_com_leite);
   border-radius: 1rem;
   width: 100px;
+  height: fit-content;
 }
 
 .product {

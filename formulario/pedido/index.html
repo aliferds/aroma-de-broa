@@ -18,7 +18,7 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">Se você está usando um navegador <strong>antigo</strong>. Por favor <a href="#">use um navegador mais atualizado</a> para melhorar sua experiência</p>
   <![endif]-->
-  <header class="header">
+  <header>
     <div class="interface">
       <nav class="navbar">
         <a 
@@ -39,122 +39,82 @@
   <main>
     <div class="interface">
       <section>
-        <h1 class="uppercase">Pedido</h1>
-        <form action="post" id="pedido">
+        <form id="pedido">
+          <h1 class="uppercase">Pedido</h1>
 
           <fieldset>
             <legend>Informações do cliente</legend>
 
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required>
-
-            <label for="email">E-mail:</label>
-            <input 
+            <div class="input-adb flex flex-align-center">
+              <input type="text" name="nome" id="nome" required>
+              <label for="nome">Nome</label>
+            </div>
+            
+            <div class="input-adb flex flex-align-center">
+              <input 
               type="email" 
               name="email"
               required
               id="email" 
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-            >
-            <label for="telefone">Telefone:</label>
-            <input 
-              type="tel" 
-              name="telefone" 
-              id="telefone" 
-              placeholder=""
-              maxlength="11"
-              pattern="(\([0-9]{2}\)) \s([9]{1})?([0-9]{4})-([0-9]{4})" 
-              required>
+              >
+              <label for="email">E-mail</label>
+            </div>
+        
+            <div class="input-adb flex flex-align-center">
+              <input 
+                type="tel" 
+                name="telefone" 
+                id="telefone" 
+                maxlength="11"
+                required>
+              <label for="telefone">Telefone</label>
+            </div>
           </fieldset>
 
-            <fieldset>
-              <legend>Produtos</legend>
+          <fieldset>
+            <legend>Items no carrinho</legend>
+            <p class="text-center" id="empty">Seu carrinho encontra-se vazio</p>
+            <!-- <table>
+              <thead>
+                <tr>
+                  <th>Nome do produto</th>
+                  <th>quantidade</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="product">
+                    Adicionar nome do produto
+                     <input type="text" disable>
+                  </td>
+                  <td class="qtd">
+                    <input type="number" name="" id="">
+                  </td>
+                  <td class="excluir">
+                    adicionar icone de lixeira
+                  </td>
+                </tr>
+              </tbody>
+            </table> -->
 
-              <!-- Pães -->
-              <div>
-
-                <input type="checkbox" name="paofrances" id="paofrances">
-                <label for="paofrances">Pão francês</label>
-                <input class="qtd" type="number" name="qtd_paofrances" id="qtd_paofrances">
-                
-                <input type="checkbox" name="croissant" id="croissant">
-                <label for="croissant">Croissant</label>
-                <input class="qtd" type="number" name="qtd_croissant" id="qtd_croissant">
-              
-                <input type="checkbox" name="broa" id="broa">
-                <label for="broa">Broa</label>
-                <input class="qtd" type="number" name="qtd_broa" id="qtd_broa">
-              </div>
-
-              <!-- Bolos -->
-              <div>
-                <input type="checkbox" name="bolofuba" id="bolofuba">
-                <label for="bolofuba">Bolo de fubá</label>
-                <input class="qtd" type="number" name="qtd_bolofuba" id="qtd_bolofuba">
-                
-                <input type="checkbox" name="bolochocolate" id="bolochocolate">
-                <label for="bolochocolate">Bolo de chocolate</label>
-                <input class="qtd" type="number" name="qtd_bolochocolate" id="qtd_bolochocolate">
-                
-                <input type="checkbox" name="bolocenoura" id="bolocenoura">
-                <label for="bolocenoura">Bolo de cenoura</label>
-                <input class="qtd" type="number" name="qtd_bolocenoura" id="qtd_bolocenoura">
-              </div>
-
-              <!-- Doces -->
-              <div>
-                <input type="checkbox" name="quindim" id="quindim">
-                <label for="quindim">Quindim</label>
-                <input class="qtd" type="number" name="qtd_quindim" id="qtd_quidim">
-                
-                <input type="checkbox" name="pudim" id="pudim">
-                <label for="pudim">Pudim</label>
-                <input class="qtd" type="number" name="qtd_pudim" id="qtd_pudim">
-              </div>
-
-              <!-- Salgados -->
-              <div>
-                <input type="checkbox" name="coxinha" id="coxinha">
-                <label for="coxinha">Coxinha</label>
-                <input class="qtd" type="number" name="qtd_coxinha" id="qtd_coxinha">
-                
-                <input type="checkbox" name="pastel" id="pastel">
-                <label for="pastel">Pastel</label>
-                <input class="qtd" type="number" name="qtd_pastel" id="qtd_pastel">
-                
-                <input type="checkbox" name="empada" id="empada">
-                <label for="empada">Empada</label>
-                <input class="qtd" type="number" name="qtd_empada" id="qtd_empada">
-              </div>
-
-              <!-- bebidas -->
-              <div>
-                <input type="checkbox" name="cafe" id="cafe">
-                <label for="cafe">Café</label>
-                <input class="qtd" type="number" name="qtd_cafe" id="qtd_cafe">
-                
-                <input type="checkbox" name="cha" id="cha">
-                <label for="cha">Chás</label>
-                <input class="qtd" type="number" name="qtd_cha" id="qtd_cha">
-                
-                <input type="checkbox" name="milkshake" id="milkshake">
-                <label for="milkshake">Milkshake</label>
-                <input class="qtd" type="number" name="qtd_milkshake" id="qtd_milkshake">
-              </div>
-            </fieldset>
+            <div class="form-btns">
+              <button id="resetCart" class="btn-form">Limpar carrinho</button>
+              <button id="addOnCart"  class="btn-form">Adicionar produto</button>
+            </div>
+          </fieldset>
             
             <div class="textarea-container">
-              
               <label for="observacoes">Observações:</label>
               <textarea 
-              name="observacoes" 
-              id="observacoes" 
-              rows="10"
-              required
-              form="pedido"
-              >
-            </textarea>
-          </div>
+                name="observacoes" 
+                id="observacoes" 
+                rows="10"
+                required
+                form="pedido"
+              ></textarea>
+            </div>
         
           <div class="form-btns">
             <input type="reset" value="limpar">
@@ -164,6 +124,301 @@
       </section>
     </div>
   </main>
+
+  <section class="modal" id="product_modal">
+  <form>
+    <fieldset>
+      <h2>Produtos</h2>
+      <div class="carrousel_produtos">
+        
+        <div class="carrousel_items">
+          <div class="card_produto">
+            <label for="pao_frances" class="product">
+              <input type="checkbox" name="pao_frances" id="pao_frances">
+              Pão francês
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/pao_frances.jpg" alt="Pão francês">
+              <span class="product_type">Pães</span>
+            </div>
+            <span class="price">R$ 15,00</span>
+            <p class="product_description">
+              O clássico da padaria, com casca crocante e um miolo macio e aerado. Feito com farinha de alta qualidade e fermentação natural para um sabor inigualável.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_pao_frances" id="qtd_pao_frances">
+              <button class="add"> + </button>
+            </div>
+          </div>
+          
+          <div class="card_produto">
+            <label for="broa_milho" class="product">
+              <input type="checkbox" name="broa_milho" id="broa_milho">
+              Broa de milho
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/broa.jpg" alt="Broa de milho">
+              <span class="product_type">Pães</span>
+            </div>
+            <span class="price">R$ 15,90</span>
+            <p class="product_description">
+              Nossa especialidade e carro-chefe. Uma receita tradicional de família, com uma textura úmida e sabor adocicado do milho. Perfeita para acompanhar um café coado na hora.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_broa_milho" id="qtd_broa_milho">
+              <button class="add"> + </button>
+            </div>
+          </div>
+          
+          <div class="card_produto">
+            <label for="croissant" class="product">
+              <input type="checkbox" name="croissant" id="croissant">
+              Croissant
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/croissant.jpg" alt="Croissant">
+              <span class="product_type">Pães</span>
+            </div>
+            <span class="price">R$ 39,60</span>
+            <p class="product_description">
+              Um clássico francês preparado com massa folhada, que desmancha na boca. Feito com manteiga de verdade, é perfeito para um café da manhã especial.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_croissant" id="qtd_croissant">
+              <button class="add"> + </button>
+            </div>
+          </div>
+
+          <div class="card_produto">
+            <label for="bolo_fuba" class="product">
+              <input type="checkbox" name="bolo_fuba" id="bolo_fuba">
+              Bolo de fubá
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/bolo_fuba.png" alt="Bolo de fubá">
+              <span class="product_type">Bolos</span>
+            </div>
+            <span class="price">R$ 20,00</span>
+            <p class="product_description">
+              Um bolo caseiro e fofinho de fubá. Uma combinação de sabores que remete à infância.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_bolo_fuba" id="qtd_bolo_fuba">
+              <button class="add"> + </button>
+            </div>
+          </div>
+          
+          <div class="card_produto">
+            <label for="bolo_chocolate" class="product">
+              <input type="checkbox" name="bolo_chocolate" id="bolo_chocolate">
+              Bolo de chocolate
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/bolo_chocolate.jpg" alt="Bolo de chocolate">
+              <span class="product_type">Bolos</span>
+            </div>
+            <span class="price">R$ 22,00</span>
+            <p class="product_description">
+              Um bolo caseiro feito com o melhor chocolate. Possui uma linda cobertura de ganachê.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_bolo_chocolate" id="qtd_bolo_chocolate">
+              <button class="add"> + </button>
+            </div>
+          </div>
+          
+          <div class="card_produto">
+            <label for="bolo_cenoura" class="product">
+              <input type="checkbox" name="bolo_cenoura" id="bolo_cenoura">
+              Bolo de cenoura
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/bolo_cenoura.png" alt="Bolo de cenoura">
+              <span class="product_type">Bolos</span>
+            </div>
+            <span class="price">R$ 24,00</span>
+            <p class="product_description">
+              Bolo fofinho de cenoura com cobertura e recheio de chocolate.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_bolo_cenoura" id="qtd_bolo_cenoura">
+              <button class="add"> + </button>
+            </div>
+          </div>
+
+          <div class="card_produto">
+            <label for="quindim" class="product">
+              <input type="checkbox" name="quindim" id="quindim">
+              Quindim
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/quindim.jpg" alt="Quindim">
+              <span class="product_type">Doces</span>
+            </div>
+            <span class="price">R$ 7,50</span>
+            <p class="product_description">
+              Uma joia da confeitaria brasileira. Feito com gemas frescas, coco ralado e muito açúcar, resulta em um doce com uma textura sedosa e sabor intenso.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_quindim" id="qtd_quindim">
+              <button class="add"> + </button>
+            </div>
+          </div>
+          
+          <div class="card_produto">
+            <label for="pudim" class="product">
+              <input type="checkbox" name="pudim" id="pudim">
+              Pudim
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/pudim.jpg" alt="Pudim">
+              <span class="product_type">Doces</span>
+            </div>
+            <span class="price">R$ 5,00</span>
+            <p class="product_description">
+              O tradicional pudim cremoso, com uma calda de caramelo brilhante e dourada. É a sobremesa perfeita para qualquer momento.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_pudim" id="qtd_pudim">
+              <button class="add"> + </button>
+            </div>
+          </div>
+
+          <div class="card_produto">
+            <label for="coxinha" class="product">
+              <input type="checkbox" name="coxinha" id="coxinha">
+              Coxinha
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/coxinha.jpg" alt="Coxinha">
+              <span class="product_type">Salgados</span>
+            </div>
+            <span class="price">R$ 4,00</span>
+            <p class="product_description">
+              A queridinha dos brasileiros! Massa de batata macia, recheada com frango desfiado suculento. Com opção cremosa com Catupiry original.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_coxinha" id="qtd_coxinha">
+              <button class="add"> + </button>
+            </div>
+          </div>
+
+          <div class="card_produto">
+            <label for="empada" class="product">
+              <input type="checkbox" name="empada" id="empada">
+              Empada
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/empadas.png" alt="Empada">
+              <span class="product_type">Salgados</span>
+            </div>
+            <span class="price">R$ 4,00</span>
+            <p class="product_description">
+              Massa amanteigada e crocante, recheada com o sabor da sua escolha. O salgado ideal para um lanche rápido e saboroso. Sabores: carne seca, frango e palmito.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_empada" id="qtd_empada">
+              <button class="add"> + </button>
+            </div>
+          </div>
+
+          <div class="card_produto">
+            <label for="pastel" class="product">
+              <input type="checkbox" name="pastel" id="pastel">
+              Pastel
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/pastel.png" alt="Pastel">
+              <span class="product_type">Salgados</span>
+            </div>
+            <span class="price">R$ 4,00</span>
+            <p class="product_description">
+              Massa sequinha e crocante, com bastante recheio e bem temperado. O salgado ideal para quem tem pressa. Sabores: frango, carne moída e presunto e mussarela.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_pastel" id="qtd_pastel">
+              <button class="add"> + </button>
+            </div>
+          </div>
+          
+          <div class="card_produto">
+            <label for="cafe" class="product">
+              <input type="checkbox" name="cafe" id="cafe">
+              Café
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/cafe.jpg" alt="Café">
+              <span class="product_type">Bebidas</span>
+            </div>
+            <span class="price">R$ 2,00</span>
+            <p class="product_description">
+              Preparado com grãos selecionados e moídos na hora. Um café quentinho, forte e aromático, que combina perfeitamente com qualquer item do nosso cardápio.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_cafe" id="qtd_cafe">
+              <button class="add"> + </button>
+            </div>
+          </div>
+
+          <div class="card_produto">
+            <label for="cha" class="product">
+              <input type="checkbox" name="cha" id="cha">
+              Chás
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/cha.jpg" alt="Chás">
+              <span class="product_type">Bebidas</span>
+            </div>
+            <span class="price">R$ 3,00</span>
+            <p class="product_description">
+              Preparado com folhas frescas. Um chá quente, forte e aromático, para o seu gosto. Sabores: camomila, boldo, canela e maçã.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_cha" id="qtd_cha">
+              <button class="add"> + </button>
+            </div>
+          </div>
+
+          <div class="card_produto">
+            <label for="milkshake" class="product">
+              <input type="checkbox" name="milkshake" id="milkshake">
+              Milkshake
+            </label>
+            <div class="relative">
+              <img src="../../public/assets/images/products/milkshake.jpg" alt="Milkshake">
+              <span class="product_type">Bebidas</span>
+            </div>
+            <span class="price">R$ 8,00</span>
+            <p class="product_description">
+              Uma sobremesa cremosa e refrescante, perfeita para qualquer hora. Nosso milkshake é batido na hora com sorvete de alta qualidade e leite, resultando em uma textura aveludada e um sabor irresistível.
+            </p>
+            <div class="quantity">
+              <button class="remove"> - </button>
+              <input type="number" value="0" min="0" name="qtd_milkshake" id="qtd_milkshake">
+              <button class="add"> + </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </fieldset>
+  </form>
+</section>
+
+
   <footer>
     <span data-lang-key="credits">
       Criação e desenvolvimento por 
@@ -172,6 +427,7 @@
       <a href="https://github.com/aliferds">Alifer DS </a>
       &copy; 2025
     </span>
+    <script src="../../src/form/order.js"></script>
   </footer>
 </body>
 </html>
