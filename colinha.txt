@@ -1,0 +1,82 @@
+Pão francês
+Pães
+descrição: O clássico da padaria, com casca crocante e um miolo macio e aerado. Feito com farinha de alta qualidade e fermentação natural para um sabor inigualável.
+preço: R$ 15,00 / kg
+
+
+Broa de milho
+Pães
+descrição: Nossa especialidade e carro-chefe. Uma receita tradicional de família, com uma textura úmida e sabor adocicado do milho. Perfeita para acompanhar um café coado na hora.
+preço: R$ 15,90 / kg
+
+
+Croissant
+Pães
+descrição: Um clássico francês preparado com massa folhada, que desmancha na boca. Feito com manteiga de verdade, é perfeito para um café da manhã especial.
+preço: R$ 39,60
+
+
+Bolo de fubá
+Bolos
+descrição: Um bolo caseiro e fofinho de fubá. Uma combinação de sabores que remete à infância.
+preço: R$ 20,00
+
+
+Bolo de chocolate
+Bolos
+descrição: Um bolo caseiro feito com o melhor chocolate. Possui uma linda cobertura de ganachê.
+preço: R$ 22,00
+
+
+Bolo de cenoura
+Bolos
+descrição: Bolo fofinho de cenoura com cobertura e recheio de chocolate.
+preço: R$ 24,00
+
+
+Quindim
+Doces
+descrição: Uma joia da confeitaria brasileira. Feito com gemas frescas, coco ralado e muito açúcar, resulta em um doce com uma textura sedosa e sabor intenso.
+preço: R$ 7,50
+
+
+Pudim
+Doces
+descrição: O tradicional pudim cremoso, com uma calda de caramelo brilhante e dourada. É a sobremesa perfeita para qualquer momento.
+preço: R$ 5,00
+
+
+Coxinha
+Salgados
+descrição: A queridinha dos brasileiros! Massa de batata macia, recheada com frango desfiado suculento. Com opção cremosa com Catupiry original.
+preço: R$ 4,00
+
+
+Empada
+Salgados
+descrição: Massa amanteigada e crocante, recheada com o sabor da sua escolha. O salgado ideal para um lanche rápido e saboroso. Sabores: carne seca, frango e palmito.
+preço: R$ 4,00
+
+
+Pastel
+Salgados
+descrição: Massa sequinha e crocante, com bastante recheio e bem temperado. O salgado ideal para quem tem pressa. Sabores: frango, carne moída e presunto e mussarela.
+preço: R$ 4,00
+
+
+Café
+Bebidas
+descrição: Preparado com grãos selecionados e moídos na hora. Um café quentinho, forte e aromático, que combina perfeitamente com qualquer item do nosso cardápio.
+preço: R$ 2,00
+
+
+Chás
+Bebidas
+descrição: Preparado com folhas frescas. Um chá quente, forte e aromático, para o seu gosto. Sabores: camomila, boldo, canela e maçã.
+preço: R$ 3,00
+
+
+Milkshake
+Bebidas
+descrição: Uma sobremesa cremosa e refrescante, perfeita para qualquer hora. Nosso milkshake é batido na hora com sorvete de alta qualidade e leite, resultando em uma textura aveludada e um sabor irresistível.
+preço: R$ 8,00
