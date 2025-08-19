@@ -398,3 +398,94 @@ fieldset.register_products label input[type="checkbox"]:checked + span {
 .btn-form:hover {
   color: var(--cafe_com_leite);
 }
+
+/* ================================ SELECT ====================== */
+
+.adb-select {
+  position: relative;
+  margin: 1rem;
+  collapse-border: collapse;
+}
+
+.adb-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: var(--pale_sand);
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--cocoa) transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--cocoa) transparent;
+  top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: var(--cocoa);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: var(--cocoa);
+  cursor: pointer;
+  background-color: var(--pale_sand);
+}
+
+.select-items {
+  position: absolute;
+  background-color: var(--pale_sand);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ========================== AVALIAÇÃO =========================== */
+
+.evaluation {
+    display: flex;
+    justify-content: center;
+    border:none;
+    padding: 4px 0;
+}
+.evaluation input[type="radio"] {
+    display:none;
+}
+.evaluation svg {
+    cursor: pointer;
+}
+.evaluation .coffe {
+    cursor: pointer;
+    padding: 2px;
+    transition: all .1s ease-in-out;
+}
+.evaluation .coffe {
+    color: var(--cocoa);
+    font-size: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.filled {
+    fill: var(--cocoa);
+}
+.evaluation label:hover>.coffe,
+.evaluation label:hover ~ label>.coffe {
+    color: yellow !important; /* Essa é a cor da estrela quando passa o mouse por cima*/
+}

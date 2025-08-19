@@ -44,21 +44,24 @@
 
           <fieldset>
             <legend>Informações do cliente</legend>
+            <div class="input-adb flex flex-align-center">
+              <input type="text" name="nome" id="nome">
+              <label for="nome">Nome</label>
+            </div>
 
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome">
-
-            <label for="email">E-mail:</label>
-            <input 
+            <div class="input-adb flex flex-align-center">
+              <input 
               type="email" 
               name="email" 
               id="email" 
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-            >
+              >
+              <label for="email">E-mail</label>
+            </div>
           </fieldset>
-          <div>
-
-
+          <div class="flex-center">
+            <label for="produto">Selecione o produto: </label>
+            <div class="adb-select" style="width:200px;">
               <select name="produto" id="produto">
                 <option value="">Pão francês</option>
                 <option value="">Croissaint</option>
@@ -75,28 +78,74 @@
                 <option value="">Chás</option>
                 <option value="">Milkshake</option>
               </select>
-
+            </div>
+          </div>
+          <div>
             <fieldset>
               <legend>Avaliação:</legend>
+              <p>Faça a avaliação escolhendo um dos botões abaixo. As notas vão de 1 a 5, sendo 1 ruim e 5 muito bom.</p>
 
-              <input type="radio" id="nota1" name="nota" value="1">
-              <label for="nota1">1</label>
+              <div class="evaluation">
 
-              <input type="radio" id="nota2" name="nota" value="2">
-              <label for="nota2">2</label>
+                <input type="radio" id="nota1" name="nota" value="1">
+                <label for="nota1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path class="coffe" d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                  </svg>
+                </label>
+                
+                <input type="radio" id="nota2" name="nota" value="2">
+                <label for="nota2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path class="coffe"  d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                  </svg>
+                </label>
+                
+                <input type="radio" id="nota3" name="nota" value="3">
+                <label for="nota3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path class="coffe"  d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                  </svg>
+                </label>
 
-              <input type="radio" id="nota3" name="nota" value="3">
-              <label for="nota3">3</label>
-
-              <input type="radio" id="nota4" name="nota" value="4">
-              <label for="nota4">4</label>
-
-              <input type="radio" id="nota5" name="nota" value="5">
-              <label for="nota5">5</label>
+                <input type="radio" id="nota4" name="nota" value="4">
+                <label for="nota4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path class="coffe"  d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                  </svg>
+                </label>
+                
+                <input type="radio" id="nota5" name="nota" value="5">
+                <label for="nota5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path class="coffe"  d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                  </svg>
+                </label>
+              </div>
             </fieldset>
 
           </div>
-          <div>
+          <div class="textarea-container">
             <label for="comentario">Comentario:</label>
             <textarea 
               name="comentario" 
@@ -104,8 +153,7 @@
               rows="10"
               required
               form="feedback"
-              >
-            </textarea>
+              ></textarea>
           </div>
         
           <input type="reset" value="limpar">
@@ -123,5 +171,7 @@
       &copy; 2025
     </span>
   </footer>
+  <script src="../../src/components/select.js"></script>
+  <script src="../../src/components/rating.js"></script>
 </body>
 </html>
