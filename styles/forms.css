@@ -489,3 +489,38 @@ fieldset.register_products label input[type="checkbox"]:checked + span {
 .evaluation label:hover ~ label>.coffe {
     color: yellow !important; /* Essa é a cor da estrela quando passa o mouse por cima*/
 }
+
+/* ======================input data ============================== */
+
+input[type="date"] {
+    background: transparent;
+    color: var(--cocoa);
+    border: 1px solid var(--cocoa);
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: none;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    padding: 10px 0 5px 10px;
+}
+
+input[type="date"]:hover {
+    border-color: var(--cocoa);
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--cocoa);
+    box-shadow: 0 0 5px var(--cocoa_opacity);
+}
+
+input[type="date"] + label {
+  color: var(--cocoa);
+  background-color: var(--pale_sand);
+  border-radius: 10px;
+  padding: 2px;
+  margin-left: 10px;
+  transform: translateY(-0.5rem);
+  font-size: 0.65em;
+}

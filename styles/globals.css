@@ -408,8 +408,6 @@ div.colunas .col2 figure{
   }
   div.colunas .col2{
     padding-left:10px;
-    display: flex;
-    justify-content: center;
   }
   div.colunas .col2 figure img{
     height: 512px;
@@ -643,6 +641,10 @@ tr:last-child {
   grid-area: price;
   font-weight: 900;
   text-align: end;
+}
+
+div.colunas.botoes p{
+  min-height: calc(3 * 2.3rem);
 }
 
 /* ==================== SIMPLE CARD ============================= */
