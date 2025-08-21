@@ -151,6 +151,7 @@ textarea:focus {
 .textarea-container {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 
 .text-cocoa.back {
@@ -211,10 +212,17 @@ fieldset.register_products input[type="checkbox"]{
   opacity: 0;
 }
 
+.register_products_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
 fieldset.register_products label span {
   border: 1px solid var(--cocoa);
   border-radius: 20px;
-  padding: 0.2rem;
+  padding: 0.2rem 0.5rem;
   margin: 5rem 0;
   position: inline-block;
   cursor: pointer;
@@ -461,7 +469,7 @@ fieldset.register_products label input[type="checkbox"]:checked + span {
 
 .evaluation {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     border:none;
     padding: 4px 0;
 }
