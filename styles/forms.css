@@ -470,20 +470,29 @@ fieldset.register_products label input[type="checkbox"]:checked + span {
 }
 .evaluation svg {
     cursor: pointer;
+    stroke: var(--cafe_com_leite);
 }
+
 .evaluation .coffe {
     cursor: pointer;
     padding: 2px;
     transition: all .1s ease-in-out;
 }
 .evaluation .coffe {
-    color: var(--cocoa);
+    color: var(--cafe_com_leite);
     font-size: 20px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.evaluation line {
+  display: none;
+}
+.evaluation line.smoke {
+  display: inline;
+}
+
 
 .filled {
-    fill: var(--cocoa);
+    fill: var(--cafe_com_leite);
 }
 .evaluation label:hover>.coffe,
 .evaluation label:hover ~ label>.coffe {
@@ -523,4 +532,57 @@ input[type="date"] + label {
   margin-left: 10px;
   transform: translateY(-0.5rem);
   font-size: 0.65em;
+}
+
+/* ===================== RADIO GROUP MOTIVO ====================== */
+
+.reason {
+  display: flex;
+  justify-content: center;
+}
+
+.reason div {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 4px 0;
+  width: fit-content;
+}
+
+.reason input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.reason input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  padding-left: 1rem;
+  margin-right: 10px;
+}
+
+.reason input[type="radio"] + label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  /* Propriedades para o círculo interno */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; /* Essencial para ser um círculo */
+  background-color: transparent; /* Cor de fundo inicial (invisível) */
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s;
+  border: 1px solid var(--cocoa);
+}
+
+/* Estado selecionado */
+.reason input[type="radio"]:checked + label {
+  border-color: var(--cafe_com_leite); /* Cor da borda quando selecionado */
+}
+
+/* Ponto interno visível quando selecionado */
+.reason input[type="radio"]:checked + label::before {
+  background-color: var(--cafe_com_leite); /* Cor do ponto quando selecionado */
 }
