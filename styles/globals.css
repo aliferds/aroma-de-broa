@@ -37,6 +37,7 @@ body {
   caret-color: var(--cocoa);
 
   font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
 
 @media(max-width: 769px) {
@@ -459,6 +460,13 @@ iframe.yt_video {
   border: 0;
 }
 
+a.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
 a.text-pale-sand:visited,
 a.text-pale-sand,
 .text-pale-sand {
@@ -606,6 +614,7 @@ tr {
   "type product"
   "description description"
   ". price";
+  grid-template-columns: 1fr 1fr;
   padding: 1rem 0.5rem;
   border-bottom: 2px dotted var(--cocoa);
   border-right: 2px solid var(--cocoa);
@@ -628,7 +637,8 @@ tr:last-child {
 .product {
   grid-area: product;
   font-weight: 900;
-  text-align: center;
+  text-align: start;
+  width: 100%;
 }
 
 .description {
