@@ -24,7 +24,7 @@ function paint() {
   for(let i = 0; i < selectedValue; i++){
     coffes[i].classList.add('filled');
   }
-  for(let i = 0; i < (selectedValue * 3); i++){
+  for(let i = 0; i <= (selectedValue * 3); i++){
     lines[i].classList.add('smoke');
   }
 }
