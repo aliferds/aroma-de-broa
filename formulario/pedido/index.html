@@ -138,9 +138,9 @@
   <section class="modal" id="product_modal">
   <form>
     <fieldset>
-      <h2>Produtos</h2>
+      <legend>Produtos</legend>
       <div class="carrousel_produtos">
-        
+        <button class="prev-btn" id="previous">&lt;</button>
         <div class="carrousel_items">
           <div class="card_produto">
             <label for="pao_frances" class="product">
@@ -422,9 +422,13 @@
             </div>
           </div>
         </div>
-        
+        <button class="next-btn" id="next">&gt;</button>
       </div>
     </fieldset>
+    <div class="form-btns">
+      <input type="reset" value="limpar" name="reset_order" id="reset_order">
+      <input type="submit" value="adicionar" name="submit_chart" id="submit_chart">
+    </div>
   </form>
 </section>
 
