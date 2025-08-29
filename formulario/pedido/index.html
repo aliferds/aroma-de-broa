@@ -82,32 +82,11 @@
             </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset id="fieldsetChart">
             <legend>Items no carrinho</legend>
-            <p class="text-center" id="empty">Seu carrinho encontra-se vazio</p>
-            <!-- <table>
-              <thead>
-                <tr>
-                  <th>Nome do produto</th>
-                  <th>quantidade</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="product">
-                    Adicionar nome do produto
-                     <input type="text" disable>
-                  </td>
-                  <td class="qtd">
-                    <input type="number" name="" id="">
-                  </td>
-                  <td class="excluir">
-                    adicionar icone de lixeira
-                  </td>
-                </tr>
-              </tbody>
-            </table> -->
+            <div id="itemsOnChart">
+              <p class="text-center" id="empty">Seu carrinho encontra-se vazio</p>
+            </div>
 
             <div class="form-btns">
               <button id="resetCart" class="btn-form">Limpar carrinho</button>
@@ -127,8 +106,8 @@
             </div>
         
           <div class="form-btns">
-            <input type="reset" value="limpar">
-            <input type="submit" value="enviar">
+            <input type="reset" value="limpar" id="reset_form" name="reset_form">
+            <input type="submit" value="enviar" id="send_form" name="send_form">
           </div>
         </form>
       </section>
@@ -427,7 +406,7 @@
     </fieldset>
     <div class="form-btns">
       <input type="reset" value="limpar" name="reset_order" id="reset_order">
-      <input type="submit" value="adicionar" name="submit_chart" id="submit_chart">
+      <input type="submit" value="salvar" name="submit_chart" id="submit_chart">
     </div>
   </form>
 </section>

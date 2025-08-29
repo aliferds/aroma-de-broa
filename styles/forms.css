@@ -301,6 +301,11 @@ fieldset.register_products label input[type="checkbox"]:checked + span {
   font-size: 2.2rem;
 }
 
+.modal table {
+  display: block;
+  border: 0;
+}
+
 .carrousel_produtos {
   display: flex;
   align-items: center;
