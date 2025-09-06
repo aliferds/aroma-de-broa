@@ -7,7 +7,7 @@ Este é um projeto executado por [Alifer Duarte Silva](#Author) durante as aulas
 - [Projeto Aroma de Broa](#projeto-aroma-de-broa)
 - [Sumário](#sumário)
 - [Introdução](#introdução)
-- [STATUS](#status)
+- [Status](#status)
 - [Estrutura de diretórios](#estrutura-de-diretórios)
 - [Decisões de projeto](#decisões-de-projeto)
   - [Menu de navegação](#menu-de-navegação)
@@ -23,7 +23,7 @@ Este é um projeto executado por [Alifer Duarte Silva](#Author) durante as aulas
 
 O projeto simula um site para a padaria de bairro. O nome Aroma de Broa foi criado por mim (Alifer). Foi pedido que houvesse além da página inicial com informações da padaria, também apresentasse as páginas para feedback, contato, cadastrar e pedidos.
 
-# STATUS
+# Status
 
 Em construção 
 
@@ -86,6 +86,8 @@ Contém arquivo **.gitignore** para não subir imagens e arquivos zip das tarefa
 │       │       └── 🖼️ snacks.png
 │       └── 🖼️ favicon.ico
 ├── 📁 src/
+│   ├── 📁 utils/
+│   │   ├── 📄 localStorage.js
 │   ├── 📁 components/
 │   │   ├── 📄 rating.js
 │   │   └── 📄 select.js
@@ -120,6 +122,8 @@ Todos os formulários possuem um único arquivo de estilização para manutenç�
 Para os inputs, foi considerado que todos são obrigatórios com exceção daqueles marcados como opcionais em decorrência da experiência de usuário.
 
 Para alguns formulários foram utilizadas algumas decisões mais específicas, como é descrito a seguir.
+
+A validação dos formulários acontecem dentro de validateForm.js independente do formulário, nele é selecionado o formulário, então para cada input obrigatório faz uma verificação se ele é válido. Caso o input não seja válido a borda da área do input fica vermelha. No caso de entradas para avaliação e pedidos, o paragrafo é colocado como vermelho.
 
 ### Pedido
 Para o formulário de pedido, foi considerado que para adicionar o pedido a pessoa selecionará o produto que será mostrado em formato de tabela, podendo adicionar, visualizar, editar e excluir o pedido.
