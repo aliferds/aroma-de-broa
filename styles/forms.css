@@ -562,6 +562,19 @@ input[type="date"] {
     padding: 10px 0 5px 10px;
 }
 
+input[type="date"].invalid,
+input[type="text"].invalid,
+input[type="email"].invalid,
+input[type="tel"].invalid,
+textarea.invalid {
+  border-color: red;
+}
+
+p.invalid {
+  color: red;
+}
+
+
 input[type="date"]:hover {
     border-color: var(--cocoa);
 }

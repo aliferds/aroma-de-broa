@@ -15,6 +15,7 @@ submit.addEventListener('click', (e) => {
       // console.log(`Validando ${input.id}: ${isValid}`);
       if(!isValid) {
         isFormValid = false;
+        input.classList.add('invalid');
       }
     }
   })
@@ -33,28 +34,40 @@ submit.addEventListener('click', (e) => {
       })
       if(amount < minimum){
         isFormValid = false;
+        const paragraph = document.querySelector('.register_products p');
+        paragraph.classList.add('invalid');
       }
       break;
-    case "feedback":
-      const rating = document.querySelectorAll('input[type=radio]');
-      let isRated = false;
-      rating.forEach(rate => {
-        if(rate.checked){
-          isRated = true;
+      case "feedback":
+        const rating = document.querySelectorAll('input[type=radio]');
+        const paragraph_feedback = document.querySelector('form div fieldset p');
+        paragraph_feedback.classList.add('invalid');
+
+        let isRated = false;
+        rating.forEach(rate => {
+          if(rate.checked){
+            isRated = true;
+          }
+        })
+        if(!isRated){
+          isFormValid = false;
         }
-      })
-      if(!isRated){
-        isFormValid = false;
-      }
-      break;
-    case 'pedido':
-      break;
-    case 'contato':
-      const msg = document.querySelector('textarea');
-      if(!textValidate(msg)){
-        isFormValid = false;
-      }
-      break;
+        break;
+      case 'pedido':
+        const items = document.querySelector('#produtosCarrinho');
+        const paragraph_items = document.querySelector('#itemsOnChart p');
+        paragraph_items.classList.add('invalid');
+        if(!items){
+          isFormValid = false;
+        }
+        break;
+      case 'contato':
+        const msg = document.querySelector('textarea');
+        if(!textValidate(msg)){
+          isFormValid = false;
+          msg.classList.add('invalid');
+        }
+        break;
   }
 
 
