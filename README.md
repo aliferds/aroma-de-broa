@@ -15,7 +15,8 @@ Este é um projeto executado por [Alifer Duarte Silva](#Author) durante as aulas
     - [Pedido](#pedido)
     - [feedback](#feedback)
     - [cadastro](#cadastro)
-  - [Decisões gerais](#decisões-gerais)
+  - [Styles and Scripts](#styles-and-scripts)
+- [O que fazer?](#o-que-fazer)
 - [Informações sobre as imagens](#informações-sobre-as-imagens)
 - [Autor](#autor)
 
@@ -107,6 +108,10 @@ Contém arquivo **.gitignore** para não subir imagens e arquivos zip das tarefa
 
 # Decisões de projeto
 
+Para o cardápio é utilizado uma tabela, e então é estilizada com CSS por questão de semântica do HTML.
+Há um slider de imagens que seriam de produtos da padaria.
+Adicionado foto da "fachada" da padaria para uma melhor explicação sobre a padaria.
+
 ## Menu de navegação
 
 Há um icone de carrinho no canto superior do header para direcionar para a página de pedidos, assim como há em vários sites que fazem vendas.
@@ -137,12 +142,26 @@ No formulário de cadastro, foi utilizado checkbox como possibilidade de mostrar
 
 Para a questão de confirmar em receber anúncios e termos foi utilizado checkbox como um toggle que deixa o usuário decidir.
 
+## Styles and Scripts
 
-## Decisões gerais
+Os arquivos estão componentizados de forma a tentar reaproveitar o máximo do código e ficar de forma simples e legível, sem que tenha problema para localizar o que precisa mudar!
 
-Para o cardápio é utilizado uma tabela, e então é estilizada com CSS por questão de semântica do HTML.
-Há um slider de imagens que seriam de produtos da padaria.
-Adicionado foto da "fachada" da padaria para uma melhor explicação sobre a padaria.
+# O que fazer?
+
+- [ ] Fazer um modal de boas-vindas
+- [ ] Fazer sobre uso de cookies e aceitação de termos
+- [ ] Rever estilos de Diferemciais na página inicial
+- [ ] Trocar link do footer para portifólio
+- [ ] Colocar autocomplete para os inputs
+- [ ] Botão do carrinho para adicionar itens
+- [ ] Colocar campo de filtros e pesquisa no modal de adicionar itens
+- [ ] Colocar modal para confirmação para limpar (resetar) formulários
+- [ ] Colocar modal de confirmação e revisão antes de submeter um formulário
+- [ ] Colocar cálculo de preço para pedidos
+- [ ] Colocar tag com quantidade no icone de carrinho na tela inicial
+- [ ] Colocar avaliação de produtos mostrando no modal de carrinho.
+- [ ] Verificar possíveis maneiras de diminuir CSS
+- [ ] Utilizar headless wordpress para conexão como sistema de API
 
 
 # Informações sobre as imagens
