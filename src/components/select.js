@@ -1,42 +1,38 @@
-var x, i, j, l, ll, selElmnt, a, b, c;
-x = document.getElementsByClassName("adb-select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 1; j < ll; j++) {
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
+let adb_select, selectElement, div_a, div_b, div_c;
+adb_select = document.getElementsByClassName("adb-select");
+for (let count_i = 0; count_i < adb_select.length; count_i++) {
+  selectElement = adb_select[count_i].getElementsByTagName("select")[0];
+  div_a = document.createElement("DIV");
+  div_a.setAttribute("class", "select-selected");
+  div_a.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML;
+  adb_select[count_i].appendChild(div_a);
+  div_b = document.createElement("DIV");
+  div_b.setAttribute("class", "select-items select-hide");
+  for (let count_j = 1; count_j < selectElement.length; count_j++) {
+    div_c = document.createElement("DIV");
+    div_c.innerHTML = selectElement.options[count_j].innerHTML;
+    div_c.addEventListener("click", function(e) {
+        let sameAsSelected, count_i, select, prevSibling;
+        select = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        prevSibling = this.parentNode.previousSibling;
+        for (count_i = 0; count_i < select.length; count_i++) {
+          if (select.options[count_i].innerHTML == this.innerHTML) {
+            select.selectedIndex = count_i;
+            prevSibling.innerHTML = this.innerHTML;
+            sameAsSelected = this.parentNode.getElementsByClassName("same-as-selected");
+            for (let k = 0; k < sameAsSelected.length; k++) {
+              sameAsSelected[k].removeAttribute("class");
             }
             this.setAttribute("class", "same-as-selected");
             break;
           }
         }
-        h.click();
+        prevSibling.click();
     });
-    b.appendChild(c);
+    div_b.appendChild(div_c);
   }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  adb_select[count_i].appendChild(div_b);
+  div_a.addEventListener("click", function(e) {
     e.stopPropagation();
     closeAllSelect(this);
     this.nextSibling.classList.toggle("select-hide");
@@ -44,22 +40,20 @@ for (i = 0; i < l; i++) {
   });
 }
 
-function closeAllSelect(elmnt) {
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
+function closeAllSelect(element) {
+  let selectItems, selectSelected, arrNo = [];
+  selectItems = document.getElementsByClassName("select-items");
+  selectSelected = document.getElementsByClassName("select-selected");
+  for (let i = 0; i < selectSelected.length; i++) {
+    if (element == selectSelected[i]) {
       arrNo.push(i)
     } else {
-      y[i].classList.remove("select-arrow-active");
+      selectSelected[i].classList.remove("select-arrow-active");
     }
   }
-  for (i = 0; i < xl; i++) {
+  for (let i = 0; i < selectItems.length; i++) {
     if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
+      selectItems[i].classList.add("select-hide");
     }
   }
 }

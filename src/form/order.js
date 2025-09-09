@@ -10,7 +10,7 @@ const productModal = document.getElementById('product_modal');
 
 const elemQuant = document.querySelectorAll('.quantity');
 
-let chart = [];
+let chart = []; // variável para guardar os itens (carinho)
 
 btnProduct.addEventListener('click', (e) => {
   e.preventDefault();
