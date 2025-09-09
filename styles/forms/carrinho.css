@@ -1,0 +1,182 @@
+.modal {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: none;
+  justify-content: center;
+
+  z-index: 99; 
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal form {
+  background-color: var(--pale_sand);
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.modal form .form-btns {
+  position: sticky;
+  left: 0;
+}
+
+.modal form::-webkit-scrollbar {
+  display: none;
+}
+
+.modal form fieldset {
+  padding: 0.5rem;
+  height: 100%;
+  min-height: 480px;
+  display: flex;
+}
+
+.modal form fieldset legend {
+  text-align: start;
+  font-size: 2.2rem;
+}
+
+.modal table {
+  display: block;
+  border: 0;
+}
+
+.carrousel_produtos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.carrousel_items {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.card_produto {
+  border: 1px solid var(--cocoa);
+  padding: 0.5rem;
+  border-radius: 10px;
+  position: relative;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+  "imagem imagem imagem"
+  "product product price"
+  "description description description"
+  "qtd qtd qtd";
+}
+
+.card_produto .relative {
+  grid-area: imagem;
+}
+
+.card_produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card_produto input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: end;
+}
+
+.card_produto input:focus {
+  color: var(--cocoa);
+}
+
+.card_produto .product_type {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--pale_sand);
+  background-color: var(--cocoa);
+  border-radius: 10px;
+  padding: 5px 5px;
+}
+.card_produto span.price {
+  grid-area: price;
+}
+
+.card_produto .product_description {
+  grid-area: description;
+  max-width: 280px;
+  color: var(--cafe_com_leite);
+  height: 50px;
+  text-align: justify;
+  font-size: 10px;
+  vertical-align: start;
+}
+
+.quantity {
+  grid-area: qtd;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.quantity button {
+  width: 50px;
+}
+
+.quantity input {
+  width: 100px;
+  height: 1.2rem;
+  padding-right: 5px;
+  opacity: 1;
+  border: 1px solid var(--cocoa);
+  border-radius: 5px;
+  position: relative;
+}
+
+.quantity .remove {
+  background-color: var(--cocoa);
+  border-radius: 20px 0 0 20px;
+}
+
+.quantity .add {
+  background-color: var(--cocoa);
+  border-radius: 0 20px 20px 0;
+}
+
+.quantity .add,
+.quantity .remove {
+  border: none;
+  color: var(--white);
+  height: 1.2rem;
+}
+
+.card_produto label {
+  grid-area: product;
+  color: var(--cocoa);
+  wrap: no-wrap;
+  height: 1.5rem;
+}
+
+.modal fieldset .next-btn {
+  right: 5vw;
+}
+.modal fieldset .prev-btn {
+  left: 5vw;
+}

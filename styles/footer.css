@@ -1,0 +1,24 @@
+footer {
+  min-height: 20vh;
+  background-color: var(--cocoa);
+  color: var(--pale_sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width: 480px){
+  footer {
+    flex-direction: column;
+  }
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--pale_sand);
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: var(--cafe_com_leite);
+}

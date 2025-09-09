@@ -1,0 +1,43 @@
+@import '../theme/adb-theme.css';
+
+input[type="checkbox"].interruptor {
+  margin: 1rem;
+  position: relative;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  background-color: var(--pale_sand);
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"].interruptor:checked {
+  background-color: var(--cocoa);
+}
+
+input[type="checkbox"].interruptor::before {
+  position: absolute;
+  content: '';
+  left: calc(1.5rem - 1.6rem);
+  top: calc(1.5rem - 1.6rem);
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: var(--cafe_com_leite);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px var(--cocoa), 0 -1px 3px var(--cocoa);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"].interruptor:hover::before {
+  box-shadow: 0 0 0px 8px rgba(from var(--cocoa) r, g, b, 0.3); 
+}
+input[type="checkbox"].interruptor:checked:hover::before {
+  box-sizing: 0 0 0px 8px (from var(--cocoa) r, g, b, 0.3);
+}
+input[type="checkbox"].interruptor:checked::before {
+  transform: translateX(100%);
+}

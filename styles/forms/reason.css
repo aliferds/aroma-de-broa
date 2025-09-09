@@ -1,0 +1,52 @@
+@import "../theme/adb-theme.css";
+
+.reason {
+  display: flex;
+  justify-content: center;
+}
+
+.reason div {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 4px 0;
+  width: fit-content;
+}
+
+.reason input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.reason input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  padding-left: 1.2rem;
+  margin-right: 10px;
+}
+
+.reason input[type="radio"] + label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  /* Propriedades para o círculo interno */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; /* Essencial para ser um círculo */
+  background-color: transparent; /* Cor de fundo inicial (invisível) */
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s;
+  border: 1px solid var(--cocoa);
+}
+
+/* Estado selecionado */
+.reason input[type="radio"]:checked + label {
+  border-color: var(--cafe_com_leite); /* Cor da borda quando selecionado */
+}
+
+/* Ponto interno visível quando selecionado */
+.reason input[type="radio"]:checked + label::before {
+  background-color: var(--cafe_com_leite); /* Cor do ponto quando selecionado */
+}

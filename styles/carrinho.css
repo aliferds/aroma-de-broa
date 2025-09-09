@@ -1,0 +1,20 @@
+@import './theme/adb-theme.css';
+
+.carrinho {
+  width: 48px;
+  height:48px;
+  border-radius: 50%;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.carrinho svg {
+  max-width: 24px;
+  max-height: 24px;
+  fill: var(--cocoa);
+  transition: fill 0.5s ease-in-out;
+}
+
+.carrinho:hover svg{
+  fill: var(--cafe_com_leite);
+}

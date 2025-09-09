@@ -1,0 +1,12 @@
+:root {
+  --cocoa: #412920ff;
+  --cocoa_opacity: rgba(65, 41, 32, 0.7);
+  --cafe_com_leite: #A9846A;
+  --pale_sand: #FFECC6;
+  --white: #f4f4f4;
+
+  --foreground: var(--cocoa);
+  --background: var(--pale_sand);
+
+  --menuMobile: 72px;
+}

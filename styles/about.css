@@ -1,0 +1,26 @@
+div.colunas .col2 figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(min-width: 769px){
+  div.colunas {
+    display: flex;
+    justify-content: space-between;
+  }
+  div.colunas .col1,
+  div.colunas .col2 {
+    width: 50%;
+  }
+  div.colunas .col1{
+    padding-right: 10px;
+  }
+  div.colunas .col2{
+    padding-left:10px;
+  }
+  div.colunas .col2 figure img{
+    height: 512px;
+  }
+}
