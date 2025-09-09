@@ -2,7 +2,7 @@ export const mobileMenu = () => {
     const bottomMenu = document.getElementById('bottom-menu');
     const header = document.querySelector('header');
     const main = document.querySelector('main');
-    const footer = document.querySelector('footer');
+    const footer = document.querySelector('rodape-alifer');
 
 
     const contentHeight = header.offsetHeight + main.offsetHeight + footer.offsetHeight;

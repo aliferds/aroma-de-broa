@@ -42,7 +42,7 @@ O projeto é dividido em pastas de forma que possa ser localizados bem dentro do
 Contém arquivo **.gitignore** para não subir imagens e arquivos zip das tarefas para o github
 
 ```
-.
+├── 📁 .git/ 🚫 (auto-hidden)
 ├── 📁 formulario/
 │   ├── 📁 cadastro/
 │   │   └── 🌐 index.html
@@ -56,40 +56,39 @@ Contém arquivo **.gitignore** para não subir imagens e arquivos zip das tarefa
 │   └── 📁 assets/
 │       ├── 📁 images/
 │       │   ├── 📁 diferenciais/
-│       │   │   ├── 🖼️ atendimento.png
+│       │   │   ├── 🖼️ atendimento.png 🚫 (auto-hidden)
 │       │   │   ├── 🖼️ ingredientes.jpg
 │       │   │   └── 🖼️ tradicional.jpg
 │       │   ├── 📁 logo/
-│       │   │   ├── 🖼️ aroma_de_broa_logo.png
+│       │   │   ├── 🖼️ aroma_de_broa_logo.png 🚫 (auto-hidden)
 │       │   │   └── 🖼️ aroma_de_broa_logo.svg
 │       │   ├── 📁 photos/
-│       │   │   └── 🖼️ fachada.png
+│       │   │   └── 🖼️ fachada.png 🚫 (auto-hidden)
 │       │   ├── 📁 products/
-│       │   │   ├── 🖼️ bolo_cenoura.png
+│       │   │   ├── 🖼️ bolo_cenoura.png 🚫 (auto-hidden)
 │       │   │   ├── 🖼️ bolo_chocolate.jpg
-│       │   │   ├── 🖼️ bolo_fuba.png
+│       │   │   ├── 🖼️ bolo_fuba.png 🚫 (auto-hidden)
 │       │   │   ├── 🖼️ broa.jpg
 │       │   │   ├── 🖼️ cafe.jpg
 │       │   │   ├── 🖼️ cha.JPG
 │       │   │   ├── 🖼️ coxinha.jpg
 │       │   │   ├── 🖼️ croissant.jpg
-│       │   │   ├── 🖼️ empadas.png
+│       │   │   ├── 🖼️ empadas.png 🚫 (auto-hidden)
 │       │   │   ├── 🖼️ milkshake.jpg
 │       │   │   ├── 🖼️ pao_frances.jpg
-│       │   │   ├── 🖼️ pastel.png
+│       │   │   ├── 🖼️ pastel.png 🚫 (auto-hidden)
 │       │   │   ├── 🖼️ pudim.jpg
 │       │   │   └── 🖼️ quindim.jpg
 │       │   └── 📁 slide/
-│       │       ├── 🖼️ breads.png
-│       │       ├── 🖼️ cakes.png
-│       │       ├── 🖼️ candies.png
-│       │       ├── 🖼️ pizzas_and_burguers.png
-│       │       └── 🖼️ snacks.png
+│       │       ├── 🖼️ breads.png 🚫 (auto-hidden)
+│       │       ├── 🖼️ cakes.png 🚫 (auto-hidden)
+│       │       ├── 🖼️ candies.png 🚫 (auto-hidden)
+│       │       ├── 🖼️ pizzas_and_burguers.png 🚫 (auto-hidden)
+│       │       └── 🖼️ snacks.png 🚫 (auto-hidden)
 │       └── 🖼️ favicon.ico
 ├── 📁 src/
-│   ├── 📁 utils/
-│   │   ├── 📄 localStorage.js
 │   ├── 📁 components/
+│   │   ├── 📄 carrousel.js
 │   │   ├── 📄 rating.js
 │   │   └── 📄 select.js
 │   ├── 📁 form/
@@ -98,10 +97,31 @@ Contém arquivo **.gitignore** para não subir imagens e arquivos zip das tarefa
 │   ├── 📁 navbar/
 │   │   ├── 📄 desktop.js
 │   │   └── 📄 mobile.js
+│   ├── 📁 utils/
+│   │   └── 📄 localStorage.js
 │   └── 📄 scripts.js
 ├── 📁 styles/
-│   ├── 🎨 forms.css
-│   └── 🎨 globals.css
+│   ├── 📁 forms/
+│   │   ├── 🎨 carrinho.css
+│   │   ├── 🎨 checkbox-switch.css
+│   │   ├── 🎨 checkbox-tags.css
+│   │   ├── 🎨 coffe-ratting.css
+│   │   ├── 🎨 index.css
+│   │   └── 🎨 reason.css
+│   ├── 📁 theme/
+│   │   └── 🎨 adb-theme.css
+│   ├── 🎨 about.css
+│   ├── 🎨 cardapio.css
+│   ├── 🎨 carrinho.css
+│   ├── 🎨 carrousel.css
+│   ├── 🎨 footer.css
+│   ├── 🎨 globals.css
+│   ├── 🎨 logo.css
+│   ├── 🎨 navbar.css
+│   ├── 🎨 reset.css
+│   ├── 🎨 simple-card.css
+│   └── 🎨 video.css
+├── 🚫 .gitignore
 ├── 📖 README.md
 └── 🌐 index.html
 ```
@@ -127,7 +147,7 @@ Todos os formulários possuem um único arquivo de estilização para manutenç�
 Para os inputs, foi considerado que todos são obrigatórios com exceção daqueles marcados como opcionais em decorrência da experiência de usuário.
 
 Para alguns formulários foram utilizadas algumas decisões mais específicas, como é descrito a seguir.
-
+\
 A validação dos formulários acontecem dentro de validateForm.js independente do formulário, nele é selecionado o formulário, então para cada input obrigatório faz uma verificação se ele é válido. Caso o input não seja válido a borda da área do input fica vermelha. No caso de entradas para avaliação e pedidos, o paragrafo é colocado como vermelho.
 
 ### Pedido
@@ -151,7 +171,7 @@ Os arquivos estão componentizados de forma a tentar reaproveitar o máximo do c
 - [ ] Fazer um modal de boas-vindas
 - [ ] Fazer sobre uso de cookies e aceitação de termos
 - [ ] Rever estilos de Diferemciais na página inicial
-- [ ] Trocar link do footer para portifólio
+- [X] Trocar link do footer para portifólio
 - [ ] Colocar autocomplete para os inputs
 - [ ] Botão do carrinho para adicionar itens
 - [ ] Colocar campo de filtros e pesquisa no modal de adicionar itens
