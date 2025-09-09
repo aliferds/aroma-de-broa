@@ -1,0 +1,57 @@
+table.cardapio {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cardapio thead tr:first-child {
+  border-top: 2px solid var(--cocoa);
+}
+
+.cardapio tr {
+  display: grid;
+  grid-template-areas:
+  "type product"
+  "description description"
+  ". price";
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 0.5rem;
+  border-bottom: 2px dotted var(--cocoa);
+  border-right: 2px solid var(--cocoa);
+  border-left: 2px solid var(--cocoa);
+}
+
+.cardapio tr:last-child {
+  border-bottom: 2px solid var(--cocoa);
+}
+
+.type {
+  grid-area: type;
+  background-color: var(--cocoa);
+  color: var(--cafe_com_leite);
+  border-radius: 1rem;
+  width: 100px;
+  height: fit-content;
+}
+
+.product {
+  grid-area: product;
+  font-weight: 900;
+  text-align: start;
+  width: 100%;
+}
+
+.description {
+  grid-area: description;
+  text-align: justify;
+  color: var(--cafe_com_leite);
+}
+
+.price {
+  grid-area: price;
+  font-weight: 900;
+  text-align: end;
+}
+
+div.colunas.botoes p{
+  min-height: calc(3 * 2.3rem);
+}
