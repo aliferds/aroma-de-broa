@@ -1,3 +1,5 @@
+import { openModal } from "./openModal";
+
 const form = document.querySelector('form');
 
 const submit = form.querySelector('div.form-btns input[type=submit]');
@@ -73,9 +75,11 @@ submit.addEventListener('click', (e) => {
 
 
   if(isFormValid){
-    console.log(`Form validado!`);
+
+    // Colocar lógica para enviar para API
+    // console.log(`Form validado!`);
   } else {
-    alert("Preencha todos os campos!");
+    openModal(`<p>Preencha todos os campos!<p>`);
   }
 })
 

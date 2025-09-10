@@ -170,12 +170,12 @@ Os arquivos estão componentizados de forma a tentar reaproveitar o máximo do c
 
 - [ ] Fazer um modal de boas-vindas
 - [ ] Fazer sobre uso de cookies e aceitação de termos
-- [ ] Rever estilos de Diferemciais na página inicial
+- [X] Rever estilos de Diferenciais na página inicial
 - [X] Trocar link do footer para portifólio
-- [ ] Colocar autocomplete para os inputs
+- [X] Colocar autocomplete para os inputs
 - [ ] Botão do carrinho para adicionar itens
 - [ ] Colocar campo de filtros e pesquisa no modal de adicionar itens
-- [ ] Colocar modal para confirmação para limpar (resetar) formulários
+- [X] Colocar modal para confirmação para limpar (resetar) formulários
 - [ ] Colocar modal de confirmação e revisão antes de submeter um formulário
 - [ ] Colocar cálculo de preço para pedidos
 - [ ] Colocar tag com quantidade no icone de carrinho na tela inicial

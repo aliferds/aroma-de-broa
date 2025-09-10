@@ -1,17 +1,13 @@
-/*
-============= É preciso resolver o bug quando há atualização manual
-============= Ao abrir o modal verificar os itens no carrinho...
-*/
-
-
 const btnProduct = document.getElementById('addOnCart');
-const btnReset = document.getElementById('resetCart');
 const productModal = document.getElementById('product_modal');
 
 const elemQuant = document.querySelectorAll('.quantity');
 
+import {openModal} from "./openModal.js";
+
 let chart = []; // variável para guardar os itens (carinho)
 
+// Eventos para o modal
 btnProduct.addEventListener('click', (e) => {
   e.preventDefault();
   productModal.classList.add('open');
@@ -53,6 +49,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 
+// botões do modal para a quantidade de um item
 elemQuant.forEach(elem => {
     const btn_remove = elem.children[0];
     const input = elem.children[1];
@@ -118,13 +115,20 @@ addChart.addEventListener('click', e => {
     getItems();
     productModal.classList.remove('open');
 })
-cleanChart.addEventListener('click', e => {
+cleanChart.addEventListener('click', async (e) => {
     e.preventDefault();
-    // lógica para limpar o que foi selecionado
-    removeTable();
-    emptyMessage('block');
-    clearModalInputs();
-    productModal.classList.remove('open');
+    try{
+        const confirmar = await openModal(`Tem certeza que gostaria de removar TODOS os itens da sua lista de compras?`, true);
+        if(confirmar){
+            // lógica para limpar o que foi selecionado
+            removeTable();
+            emptyMessage('block');
+            clearModalInputs();
+            productModal.classList.remove('open');
+        }
+    }catch (error) {
+        console.error('Ocorreu um erro ao abrir o modal:', error);
+    }
 })
 
 
@@ -230,21 +234,46 @@ function createTable(heads, lines) {
 
             // Cria o botão de excluir
             const btnExcluir = document.createElement('button');
-            btnExcluir.innerText = 'Excluir'; // Ou adicione um ícone, como '🗑️'
+            btnExcluir.innerHTML = `
+                <svg fill="#ff4646" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    width="16px" height="16px" viewBox="0 0 485 485" xml:space="preserve">
+                <g>
+                    <g>
+                        <rect x="67.224" width="350.535" height="71.81"/>
+                        <path d="M417.776,92.829H67.237V485h350.537V92.829H417.776z M165.402,431.447h-28.362V146.383h28.362V431.447z M256.689,431.447
+                            h-28.363V146.383h28.363V431.447z M347.97,431.447h-28.361V146.383h28.361V431.447z"/>
+                    </g>
+                </g>
+                </svg>
+            `;
+            btnExcluir.style = `background-color: transparent; border-width: 0;`;
+            btnExcluir.addEventListener('mouseenter', () => {
+                btnExcluir.style.cursor = 'pointer';
+            });
+            btnExcluir.addEventListener('mouseleave', () => {});
             celulaAcoes.appendChild(btnExcluir);
 
             // Adiciona a lógica de exclusão ao botão
-            btnExcluir.addEventListener('click', () => {
-                // Remove o item do array 'chart'
-                // Use o 'filter' para remover o item pelo seu 'key'
-                chart = chart.filter(item => item.key !== lines[i].key);
-                
-                // Recria a tabela para refletir a mudança
-                if (chart.length > 0) {
-                    createTable(heads, chart);
-                } else {
-                    removeTable();
-                    emptyMessage('block');
+            btnExcluir.addEventListener('click', async () => {
+                try {
+                    const confirmar = await openModal('Deseja excluir esse item da sua lista de compras?', true);
+                    console.log(confirmar);
+                    if(confirmar){
+                        
+                        // Remove o item do array 'chart'
+                        // Use o 'filter' para remover o item pelo seu 'key'
+                        chart = chart.filter(item => item.key !== lines[i].key);
+                        
+                        // Recria a tabela para refletir a mudança
+                        if (chart.length > 0) {
+                            createTable(heads, chart);
+                        } else {
+                            removeTable();
+                            emptyMessage('block');
+                        }
+                    }
+                } catch (error) {
+                    console.error('Ocorreu um erro ao abrir o modal:', error);
                 }
 
             });
@@ -264,15 +293,29 @@ const reset_form = document.getElementById('reset_form');
 const send_form = document.getElementById('send_form');
 const resetCart = document.getElementById('resetCart');
 
-reset_form.addEventListener('click', () => {
-    removeTable();
-    emptyMessage('block');
-    clearModalInputs();
+reset_form.addEventListener('click', async () => {
+    try {
+        const confirmar = await openModal('Quer limpar todos os campos deste formulário?', true);
+        if(confirmar){
+            removeTable();
+            emptyMessage('block');
+            clearModalInputs();
+        }
+    } catch (error) {
+        console.error('Ocorreu um erro ao abrir o modal:', error);
+    }
 });
 
-resetCart.addEventListener('click', (e) => {
+resetCart.addEventListener('click', async (e) => {
     e.preventDefault();
-    removeTable();
-    emptyMessage('block');
-    clearModalInputs();
+    try { 
+        const confirmar = await openModal(`Deseja retirar todos os itens da sua lista de compras?`, true);
+        if(confirmar){
+            removeTable();
+            emptyMessage('block');
+            clearModalInputs();
+        }
+    } catch (error) {
+        console.error('Ocorreu um erro ao abrir o modal:', error);
+    }
 })

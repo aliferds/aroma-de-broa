@@ -12,6 +12,10 @@ form {
   margin-bottom: 5rem;
 }
 
+wc-modal {
+  --wc-modal-container-bg-color: var(--pale_sand);
+}
+
 legend {
   font-weight: 900;
   text-align: center;
