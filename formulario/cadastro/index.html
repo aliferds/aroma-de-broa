@@ -64,6 +64,7 @@
               type="text"
               name="nome"
               id="nome"
+              autocomplete="name"
               required>
               <label for="nome">Nome completo</label>
             </div>
@@ -72,7 +73,7 @@
               <input 
               type="date"
               name="nascimento"
-              id="nascimento" 
+              id="nascimento"
               required>
               <label for="nascimento">Data de nascimento</label>
             </div>
@@ -86,6 +87,7 @@
               name="telefone" 
               id="telefone" 
               maxlength="11"
+              autocomplete="tel"
               pattern="([0-9]{10, 11})" 
               required="required">
               <label for="telefone">Telefone</label>
@@ -97,6 +99,7 @@
               type="email" 
               name="email" 
               id="email"
+              autocomplete="email"
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               required>
               <label for="email">e-mail</label>
@@ -126,6 +129,7 @@
                 name="cep" 
                 id="cep" 
                 maxlength="8"
+                autocomplete="postal-code"
                 pattern="[0-9]{5}-[0-9]{3}"
                 required>
                 <label for="cep">CEP</label>

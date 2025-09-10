@@ -58,7 +58,7 @@
             <legend>Informações do cliente</legend>
 
             <div class="input-adb flex flex-align-center">
-              <input type="text" name="nome" id="nome" required>
+              <input type="text" name="nome" id="nome" autocomplete="name" required>
               <label for="nome">Nome completo</label>
             </div>
             
@@ -68,6 +68,7 @@
               name="email" 
               id="email" 
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              autocomplete="email"
               required
               >
               <label for="email">E-mail</label>
@@ -76,7 +77,8 @@
               <input 
               type="text" 
               name="tel" 
-              id="tel" 
+              id="tel"
+              autocomplete="tel"
               maxlength="11"
               >
               <label for="tel">Telefone <span class="opcional">(opcional)</span></label>

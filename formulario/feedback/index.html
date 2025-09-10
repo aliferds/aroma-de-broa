@@ -57,14 +57,15 @@
           <fieldset>
             <legend>Informações do cliente</legend>
             <div class="input-adb flex flex-align-center">
-              <input type="text" name="nome" id="nome">
+              <input type="text" name="nome" autocomplete="name" id="nome">
               <label for="nome">Nome</label>
             </div>
 
             <div class="input-adb flex flex-align-center">
               <input 
               type="email" 
-              name="email" 
+              name="email"
+              autocomplete="email"
               id="email" 
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               >
