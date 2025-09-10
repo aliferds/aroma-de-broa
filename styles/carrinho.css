@@ -4,6 +4,7 @@ a.carrinho {
   width: 100%;
   height: 100%;
   padding: 1rem;
+  margin-right: 1rem;
   border-radius: 50%;
   transition: background-color 0.5s ease-in-out;
   cursor: pointer;

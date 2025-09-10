@@ -1,3 +1,5 @@
+import { localGet, localRemove, localSave } from "../utils/localStorage.js";
+
 const btnProduct = document.getElementById('addOnCart');
 const productModal = document.getElementById('product_modal');
 
@@ -13,6 +15,7 @@ btnProduct.addEventListener('click', (e) => {
   productModal.classList.add('open');
   atualizaModal();
 });
+
 
 function atualizaModal(){
     // console.table(chart);
@@ -109,12 +112,31 @@ function previousItems(){
 const addChart = document.getElementById('submit_chart');
 const cleanChart = document.getElementById('reset_order');
 
+const changeChart = () => {
+    // console.log(chart);
+    const localChart = 'carrinho';
+    const items = [];
+    chart.forEach(item => {
+        items.push(item);
+    })
+    localSave(localChart, items);
+}
+
 addChart.addEventListener('click', e => {
     e.preventDefault();
     // logica para adicionar ao formulário de pedido
     getItems();
+    changeChart();
+    imprimeCarrinho();
     productModal.classList.remove('open');
 })
+
+function imprimeCarrinho() {
+    const myChart = localGet('carrinho');
+    console.log(myChart);
+    console.info(`Tamanho: ${myChart.length}`);
+}
+
 cleanChart.addEventListener('click', async (e) => {
     e.preventDefault();
     try{
@@ -192,6 +214,7 @@ function removeTable(){
         if(tb) {
             // console.log("Achou a tabela");
             tb.remove();
+            localRemove('carrinho');
         }
     } catch(err) {
         console.error(err);
@@ -257,7 +280,7 @@ function createTable(heads, lines) {
             btnExcluir.addEventListener('click', async () => {
                 try {
                     const confirmar = await openModal('Deseja excluir esse item da sua lista de compras?', true);
-                    console.log(confirmar);
+                    // console.log(confirmar);
                     if(confirmar){
                         
                         // Remove o item do array 'chart'
@@ -271,6 +294,7 @@ function createTable(heads, lines) {
                             removeTable();
                             emptyMessage('block');
                         }
+                        changeChart();
                     }
                 } catch (error) {
                     console.error('Ocorreu um erro ao abrir o modal:', error);
@@ -317,5 +341,14 @@ resetCart.addEventListener('click', async (e) => {
         }
     } catch (error) {
         console.error('Ocorreu um erro ao abrir o modal:', error);
+    }
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const myChart = localGet('carrinho');
+    if(myChart !== null) {
+        chart = myChart;
+        createTable(['produto', 'quantidade', ''], chart);
     }
 })
