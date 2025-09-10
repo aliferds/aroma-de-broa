@@ -17,6 +17,9 @@ div.colunas .col2 figure{
   div.colunas .col1{
     padding-right: 10px;
   }
+  div.colunas p {
+    height: 140px;
+  }
   div.colunas .col2{
     padding-left:10px;
   }

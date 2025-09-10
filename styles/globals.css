@@ -173,6 +173,10 @@ a.w-full,
   justify-content: space-between;
 }
 
+.flex-sa {
+  justify-content: space-around;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -196,7 +200,7 @@ a.w-full,
 @media (min-width: 1024px) {
   .interface {
     max-width: 1280px;
-    padding: 0 175px;
+    padding: 0 125px;
   }
 }
 
@@ -206,6 +210,8 @@ a.w-full,
   border: 2px solid var(--cocoa);
   border-radius: 20px;
   transition: background-color 0.5s ease-in-out;
+  width: 300px;
+  text-align: center;
 }
 
 .cocoa-btn:hover {

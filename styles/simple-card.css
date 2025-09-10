@@ -1,35 +1,21 @@
 .simple_card {
-  max-width: 280px;
+  max-width: 240px;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   height: calc(325px + 2rem);
 }
 
 .simple_card img {
-  width: 260px;
-  height: 180px;
+  width: 200px;
+  height: auto;
   margin: 1rem 0;
   text-align: center;
 }
 
 .diferenciais {
   margin: 3rem 0;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  place-items: center;
+  gap: 1rem;
 }
-
-@media(min-width: 768px) and (max-width: 1199px){
-  .diferenciais {
-    justify-content: flex-start;
-  }
-}
-
-@media(min-width: 1200px){
-  .diferenciais {
-    justify-content: center;
-  }
-}
-
