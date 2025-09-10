@@ -1,5 +1,5 @@
 rodape-alifer {
-  min-height: 20vh;
+  min-height: 120px;
   background-color: var(--cocoa);
   color: var(--pale_sand);
   display: flex;

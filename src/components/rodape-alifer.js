@@ -8,6 +8,20 @@ export class RodapeAlifer extends HTMLElement {
           text-decoration: none;
           color: inherit;
         }
+        footer {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 5px;
+          box-sizing: border-box;
+        }
+        @media(max-width: 500px) {
+          footer {
+            flex-direction: column;
+          }
+        }
       </style>
       <footer>
         <span data-lang-key="credits">
