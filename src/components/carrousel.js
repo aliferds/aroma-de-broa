@@ -1,4 +1,4 @@
-export function caroussel() {
+function caroussel() {
   const slides = document.querySelectorAll(".slide");
   const prevBtn = document.querySelector(".prev-btn");
   const nextBtn = document.querySelector(".next-btn");
@@ -29,3 +29,5 @@ export function caroussel() {
   showSlide(currentSlide);
   setInterval(nextSlide, 5000);
 }
+
+caroussel();

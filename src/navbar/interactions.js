@@ -1,4 +1,4 @@
-export const desktopScroll = () => {
+const desktopScroll = () => {
   window.addEventListener('scroll', setBoxShadow);
 
   const header = document.querySelector('.header');
@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', setActiveLink);
   setActiveLink();
 
+  desktopScroll();
 })
 
 const desktopNavbar = document.querySelector('.desktop-navbar');
