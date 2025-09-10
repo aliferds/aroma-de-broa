@@ -75,9 +75,10 @@ submit.addEventListener('click', (e) => {
 
 
   if(isFormValid){
+    // console.log(`Form validado!`);
 
     // Colocar lógica para enviar para API
-    // console.log(`Form validado!`);
+    
   } else {
     openModal(`<p>Preencha todos os campos!<p>`);
   }

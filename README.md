@@ -168,8 +168,7 @@ Os arquivos estão componentizados de forma a tentar reaproveitar o máximo do c
 
 # O que fazer?
 
-- [ ] Fazer um modal de boas-vindas
-- [ ] Fazer sobre uso de cookies e aceitação de termos
+- [X] Fazer um modal de boas-vindas
 - [X] Rever estilos de Diferenciais na página inicial
 - [X] Trocar link do footer para portifólio
 - [X] Colocar autocomplete para os inputs
