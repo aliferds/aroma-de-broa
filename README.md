@@ -28,8 +28,11 @@ O projeto simula um site para a padaria de bairro. O nome Aroma de Broa foi cria
 
 ## Status
 
-Em construção 
+<div style="text-align: center;">
+  🚧 EM CONSTRUÇÃO 🚧
 
+  <small><strong>Última atualização:</strong> 29/07/2025</small>
+</div>
 
 ## Estrutura de diretórios
 
@@ -57,35 +60,15 @@ Contém arquivo **.gitignore** para não subir imagens e arquivos zip das tarefa
 │   └── 📁 assets/
 │       ├── 📁 images/
 │       │   ├── 📁 diferenciais/
-│       │   │   ├── 🖼️ atendimento.png 🚫 (auto-hidden)
-│       │   │   ├── 🖼️ ingredientes.jpg
-│       │   │   └── 🖼️ tradicional.jpg
+│       │   │   ├── 🖼️ *.jpg
 │       │   ├── 📁 logo/
-│       │   │   ├── 🖼️ aroma_de_broa_logo.png 🚫 (auto-hidden)
-│       │   │   └── 🖼️ aroma_de_broa_logo.svg
+│       │   │   ├── 🖼️ *.svg
 │       │   ├── 📁 photos/
-│       │   │   └── 🖼️ fachada.png 🚫 (auto-hidden)
+│       │   │   └── 🖼️
 │       │   ├── 📁 products/
-│       │   │   ├── 🖼️ bolo_cenoura.png 🚫 (auto-hidden)
-│       │   │   ├── 🖼️ bolo_chocolate.jpg
-│       │   │   ├── 🖼️ bolo_fuba.png 🚫 (auto-hidden)
-│       │   │   ├── 🖼️ broa.jpg
-│       │   │   ├── 🖼️ cafe.jpg
-│       │   │   ├── 🖼️ cha.JPG
-│       │   │   ├── 🖼️ coxinha.jpg
-│       │   │   ├── 🖼️ croissant.jpg
-│       │   │   ├── 🖼️ empadas.png 🚫 (auto-hidden)
-│       │   │   ├── 🖼️ milkshake.jpg
-│       │   │   ├── 🖼️ pao_frances.jpg
-│       │   │   ├── 🖼️ pastel.png 🚫 (auto-hidden)
-│       │   │   ├── 🖼️ pudim.jpg
-│       │   │   └── 🖼️ quindim.jpg
+│       │   │   ├── 🖼️ *.jpg
 │       │   └── 📁 slide/
-│       │       ├── 🖼️ breads.png 🚫 (auto-hidden)
-│       │       ├── 🖼️ cakes.png 🚫 (auto-hidden)
-│       │       ├── 🖼️ candies.png 🚫 (auto-hidden)
-│       │       ├── 🖼️ pizzas_and_burguers.png 🚫 (auto-hidden)
-│       │       └── 🖼️ snacks.png 🚫 (auto-hidden)
+│       │       ├── 🖼️ *.png
 │       └── 🖼️ favicon.ico
 ├── 📁 src/
 │   ├── 📁 components/
@@ -110,25 +93,11 @@ Contém arquivo **.gitignore** para não subir imagens e arquivos zip das tarefa
 │   └── 📄 scripts.js
 ├── 📁 styles/
 │   ├── 📁 forms/
-│   │   ├── 🎨 carrinho.css
-│   │   ├── 🎨 checkbox-switch.css
-│   │   ├── 🎨 checkbox-tags.css
-│   │   ├── 🎨 coffe-ratting.css
-│   │   ├── 🎨 index.css
-│   │   └── 🎨 reason.css
+│   │   ├── 🎨 *.css // estilização de formularios
 │   ├── 📁 theme/
-│   │   └── 🎨 adb-theme.css
-│   ├── 🎨 about.css
-│   ├── 🎨 cardapio.css
-│   ├── 🎨 carrinho.css
-│   ├── 🎨 carrousel.css
-│   ├── 🎨 footer.css
-│   ├── 🎨 globals.css
-│   ├── 🎨 logo.css
-│   ├── 🎨 navbar.css
-│   ├── 🎨 reset.css
-│   ├── 🎨 simple-card.css
-│   └── 🎨 video.css
+│   │   └── 🎨 *.css
+│   ├── 🎨 globals.css // estilizações globais
+│   ├── 🎨 *.css
 ├── 🚫 .gitignore
 ├── 📖 README.md
 ├── 📄 adb-products.json
@@ -219,6 +188,12 @@ Tarefas feitas e pontos de melhorias futuras:
 As imagens foram geradas por IA, ou retiradas do 
 [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)
 
+## Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- Javascript (ES6)
+  
 ## Autor
 
 <div align="center">
