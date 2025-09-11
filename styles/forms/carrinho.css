@@ -27,7 +27,7 @@
   overflow-y: auto;
   scrollbar-width: none;
 }
-
+.modal form .form-btns-modal,
 .modal form .form-btns {
   position: sticky;
   left: 0;
@@ -39,9 +39,8 @@
 
 .modal form fieldset {
   padding: 0.5rem;
-  height: 100%;
+  height: fit-content;
   min-height: 480px;
-  display: flex;
 }
 
 .modal form fieldset legend {
@@ -82,12 +81,16 @@
   "qtd qtd qtd";
 }
 
+.card_produto.no-display {
+  display: none;
+}
+
 .card_produto .relative {
   grid-area: imagem;
 }
 
 .card_produto img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   border-radius: 10px;
 }
@@ -121,7 +124,7 @@
 
 .card_produto .product_description {
   grid-area: description;
-  max-width: 280px;
+  max-width: 200px;
   color: var(--cafe_com_leite);
   height: 50px;
   text-align: justify;
@@ -174,9 +177,42 @@
   height: 1.5rem;
 }
 
+.modal fieldset .next-btn,
+.modal fieldset .prev-btn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--cocoa);
+  color: var(--pale_sand);
+  z-index:100;
+}
+
+.modal fieldset .next-btn:hover,
+.modal fieldset .prev-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .modal fieldset .next-btn {
   right: 5vw;
 }
 .modal fieldset .prev-btn {
   left: 5vw;
+}
+
+.remove-item-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-item-btn:hover {
+    filter: brightness(0.8);
+}
+
+#produtosCarrinho tbody tr:last-of-type {
+  height: 4rem;
+  /* border-top: 1px solid var(--cocoa); */
 }

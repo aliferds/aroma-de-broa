@@ -1,0 +1,121 @@
+{
+  "produtos": [
+    {
+      "id": "pao001",
+      "nome": "Pão francês",
+      "categoria": "Pães",
+      "preco": 15.00,
+      "imagem": "../../public/assets/images/products/pao_frances.jpg",
+      "descricao": "O clássico da padaria, com casca crocante e um miolo macio e aerado. Feito com farinha de alta qualidade e fermentação natural para um sabor inigualável."
+    },
+    {
+      "id": "pao002",
+      "nome": "Broa de milho",
+      "categoria": "Pães",
+      "preco": 15.90,
+      "imagem": "../../public/assets/images/products/broa.jpg",
+      "descricao": "Nossa especialidade e carro-chefe. Uma receita tradicional de família, com uma textura úmida e sabor adocicado do milho. Perfeita para acompanhar um café coado na hora."
+    },
+    {
+      "id": "pao003",
+      "nome": "Croissant",
+      "categoria": "Pães",
+      "preco": 39.60,
+      "imagem": "../../public/assets/images/products/croissant.jpg",
+      "descricao": "Um clássico francês preparado com massa folhada, que desmancha na boca. Feito com manteiga de verdade, é perfeito para um café da manhã especial."
+    },
+    {
+      "id": "bolo001",
+      "nome": "Bolo de fubá",
+      "categoria": "Bolos",
+      "preco": 20.00,
+      "imagem": "../../public/assets/images/products/bolo_fuba.png",
+      "descricao": "Um bolo caseiro e fofinho de fubá. Uma combinação de sabores que remete à infância."
+    },
+    {
+      "id": "bolo002",
+      "nome": "Bolo de chocolate",
+      "categoria": "Bolos",
+      "preco": 22.00,
+      "imagem": "../../public/assets/images/products/bolo_chocolate.jpg",
+      "descricao": "Um bolo caseiro feito com o melhor chocolate. Possui uma linda cobertura de ganachê."
+    },
+    {
+      "id": "bolo003",
+      "nome": "Bolo de cenoura",
+      "categoria": "Bolos",
+      "preco": 24.00,
+      "imagem": "../../public/assets/images/products/bolo_cenoura.png",
+      "descricao": "Bolo fofinho de cenoura com cobertura e recheio de chocolate."
+    },
+    {
+      "id": "doce001",
+      "nome": "Quindim",
+      "categoria": "Doces",
+      "preco": 7.50,
+      "imagem": "../../public/assets/images/products/quindim.jpg",
+      "descricao": "Uma joia da confeitaria brasileira. Feito com gemas frescas, coco ralado e muito açúcar, resulta em um doce com uma textura sedosa e sabor intenso."
+    },
+    {
+      "id": "doce002",
+      "nome": "Pudim",
+      "categoria": "Doces",
+      "preco": 5.00,
+      "imagem": "../../public/assets/images/products/pudim.jpg",
+      "descricao": "O tradicional pudim cremoso, com uma calda de caramelo brilhante e dourada. É a sobremesa perfeita para qualquer momento."
+    },
+    {
+      "id": "salgado001",
+      "nome": "Coxinha",
+      "categoria": "Salgados",
+      "preco": 4.00,
+      "imagem": "../../public/assets/images/products/coxinha.jpg",
+      "descricao": "A queridinha dos brasileiros! Massa de batata macia, recheada com frango desfiado suculento. Com opção cremosa com Catupiry original.",
+      "sabores": ["frango", "frango com catupiry"]
+    },
+    {
+      "id": "salgado002",
+      "nome": "Empada",
+      "categoria": "Salgados",
+      "preco": 4.00,
+      "imagem": "../../public/assets/images/products/empadas.png",
+      "descricao": "Massa amanteigada e crocante, recheada com o sabor da sua escolha. O salgado ideal para um lanche rápido e saboroso.",
+      "sabores": ["carne seca", "frango", "palmito"]
+    },
+    {
+      "id": "salgado003",
+      "nome": "Pastel",
+      "categoria": "Salgados",
+      "preco": 4.00,
+      "imagem": "../../public/assets/images/products/pastel.png",
+      "descricao": "Massa sequinha e crocante, com bastante recheio e bem temperado. O salgado ideal para quem tem pressa.",
+      "sabores": ["frango", "carne moída", "presunto e mussarela"]
+    },
+    {
+      "id": "bebida001",
+      "nome": "Café",
+      "categoria": "Bebidas",
+      "preco": 2.00,
+      "imagem": "../../public/assets/images/products/cafe.jpg",
+      "descricao": "Preparado com grãos selecionados e moídos na hora. Um café quentinho, forte e aromático, que combina perfeitamente com qualquer item do nosso cardápio."
+    },
+    {
+      "id": "bebida002",
+      "nome": "Chás",
+      "categoria": "Bebidas",
+      "preco": 3.00,
+      "imagem": "../../public/assets/images/products/cha.jpg",
+      "descricao": "Preparado com folhas frescas. Um chá quente, forte e aromático, para o seu gosto.",
+      "sabores": ["camomila", "boldo", "canela", "maçã"]
+    },
+    {
+      "id": "bebida003",
+      "nome": "Milkshake",
+      "categoria": "Bebidas",
+      "preco": 8.00,
+      "imagem": "../../public/assets/images/products/milkshake.jpg",
+      "descricao": "Uma sobremesa cremosa e refrescante, perfeita para qualquer hora. Nosso milkshake é batido na hora com sorvete de alta qualidade e leite, resultando em uma textura aveludada e um sabor irresistível.",
+      "sabores": ["morango", "chocolate", "creme", "ovomaltine"]
+    }
+  ]
+}

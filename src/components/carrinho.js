@@ -3,7 +3,7 @@ import { localGet } from '../utils/localStorage.js';
 document.addEventListener('DOMContentLoaded', () => {
   const myChart = localGet('carrinho');
   const carrinho = document.querySelector('a.carrinho');
-  if(myChart !== null) {
+  if(myChart && myChart.length > 0) {
     // console.log(myChart.length);
     const tagCarrinho = document.createElement('style');
     tagCarrinho.innerHTML = `

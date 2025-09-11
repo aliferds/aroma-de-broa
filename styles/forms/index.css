@@ -101,6 +101,8 @@ input:focus {
 }
 
 
+.form-bts-cart,
+.form-btns-modal,
 .form-btns {
   width: 100%;
   display: flex;
@@ -108,6 +110,8 @@ input:focus {
   padding: 1rem;
 }
 
+.form-bts-cart input[type="reset"],
+.form-btns-modal input[type="reset"],
 .form-btns input[type="reset"] {
   margin-right: 1rem;
 }

@@ -1,7 +1,7 @@
 import { RodapeAlifer } from "./components/rodape-alifer.js";
 import { WCLink } from "./components/wc-link.js";
 import { NavBar } from "./components/adb-navbar.js";
-import { WcModal } from "./components/modal.js";
+import { WcModal } from "./components/wc-modal.js";
 
 customElements.define('rodape-alifer', RodapeAlifer);
 customElements.define('wc-link', WCLink);

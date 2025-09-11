@@ -5,23 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="shortcut icon" href="../../public/assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../public/assets/favicon.ico" type="image/x-icon">
   <title>Aroma de Broa</title>
   <meta name="description" content="Padaria Aroma de Broa é a melhor de Franca e região! Há mais de 50 anos entregando qualidade pra você!">
 
   <meta name="author" content="Alifer Duarte Silva">
 
-  <link rel="stylesheet" href="../../styles/globals.css">
-  <link rel="stylesheet" href="../../styles/reset.css">
-  <link rel="stylesheet" href="../../styles/forms/index.css">
-  <link rel="stylesheet" href="../../styles/forms/carrinho.css">
+  <link rel="stylesheet" href="../styles/globals.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/forms/index.css">
+  <link rel="stylesheet" href="../styles/forms/carrinho.css">
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body id="home">
+<body id="pedido">
   <!--[if lt IE 7]>
       <p class="browsehappy">Se você está usando um navegador <strong>antigo</strong>. Por favor <a href="#">use um navegador mais atualizado</a> para melhorar sua experiência</p>
   <![endif]-->
@@ -29,7 +29,7 @@
     <div class="interface">
       <nav class="flex flex-align-center flex-sa">
         <a 
-          href="../../"
+          href="../"
           class="back text-cocoa uppercase no-decoration"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -42,7 +42,7 @@
         <div class="logo">  
           <!-- SVG gerado por IA -->
            <a href="/">
-            <img src="../../public/assets/images/logo/aroma_de_broa_logo.svg" alt="Logo da padaria Aroma de Broa">
+            <img src="../public/assets/images/logo/aroma_de_broa_logo.svg" alt="Logo da padaria Aroma de Broa">
           </a>
         </div>
       </nav>
@@ -99,12 +99,13 @@
           </fieldset>
             
             <div class="textarea-container">
-              <label for="observacoes">Observações:</label>
+              <label for="observacoes" class="bold">Observações</label>
               <textarea 
                 name="observacoes" 
                 id="observacoes" 
                 rows="10"
                 required
+                placeholder="Descreva aqui os sabores ou outras observações do seu pedido"
                 form="pedido"
               ></textarea>
             </div>
@@ -122,6 +123,10 @@
   <form>
     <fieldset>
       <legend>Produtos</legend>
+      <div class="input-adb">
+        <input type="text" id="product_search" name="product_search">
+        <label for="product_search">Buscar produto</label>
+      </div>
       <div class="carrousel_produtos">
         <button class="prev-btn" id="previous">&lt;</button>
         <div class="carrousel_items">
@@ -131,7 +136,7 @@
               Pão francês
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/pao_frances.jpg" alt="Pão francês">
+              <img src="../public/assets/images/products/pao_frances.jpg" alt="Pão francês">
               <span class="product_type">Pães</span>
             </div>
             <span class="price">R$ 15,00</span>
@@ -151,7 +156,7 @@
               Broa de milho
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/broa.jpg" alt="Broa de milho">
+              <img src="../public/assets/images/products/broa.jpg" alt="Broa de milho">
               <span class="product_type">Pães</span>
             </div>
             <span class="price">R$ 15,90</span>
@@ -171,7 +176,7 @@
               Croissant
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/croissant.jpg" alt="Croissant">
+              <img src="../public/assets/images/products/croissant.jpg" alt="Croissant">
               <span class="product_type">Pães</span>
             </div>
             <span class="price">R$ 39,60</span>
@@ -191,7 +196,7 @@
               Bolo de fubá
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/bolo_fuba.png" alt="Bolo de fubá">
+              <img src="../public/assets/images/products/bolo_fuba.png" alt="Bolo de fubá">
               <span class="product_type">Bolos</span>
             </div>
             <span class="price">R$ 20,00</span>
@@ -211,7 +216,7 @@
               Bolo de chocolate
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/bolo_chocolate.jpg" alt="Bolo de chocolate">
+              <img src="../public/assets/images/products/bolo_chocolate.jpg" alt="Bolo de chocolate">
               <span class="product_type">Bolos</span>
             </div>
             <span class="price">R$ 22,00</span>
@@ -231,7 +236,7 @@
               Bolo de cenoura
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/bolo_cenoura.png" alt="Bolo de cenoura">
+              <img src="../public/assets/images/products/bolo_cenoura.png" alt="Bolo de cenoura">
               <span class="product_type">Bolos</span>
             </div>
             <span class="price">R$ 24,00</span>
@@ -251,7 +256,7 @@
               Quindim
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/quindim.jpg" alt="Quindim">
+              <img src="../public/assets/images/products/quindim.jpg" alt="Quindim">
               <span class="product_type">Doces</span>
             </div>
             <span class="price">R$ 7,50</span>
@@ -271,7 +276,7 @@
               Pudim
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/pudim.jpg" alt="Pudim">
+              <img src="../public/assets/images/products/pudim.jpg" alt="Pudim">
               <span class="product_type">Doces</span>
             </div>
             <span class="price">R$ 5,00</span>
@@ -291,7 +296,7 @@
               Coxinha
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/coxinha.jpg" alt="Coxinha">
+              <img src="../public/assets/images/products/coxinha.jpg" alt="Coxinha">
               <span class="product_type">Salgados</span>
             </div>
             <span class="price">R$ 4,00</span>
@@ -311,7 +316,7 @@
               Empada
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/empadas.png" alt="Empada">
+              <img src="../public/assets/images/products/empadas.png" alt="Empada">
               <span class="product_type">Salgados</span>
             </div>
             <span class="price">R$ 4,00</span>
@@ -331,7 +336,7 @@
               Pastel
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/pastel.png" alt="Pastel">
+              <img src="../public/assets/images/products/pastel.png" alt="Pastel">
               <span class="product_type">Salgados</span>
             </div>
             <span class="price">R$ 4,00</span>
@@ -351,7 +356,7 @@
               Café
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/cafe.jpg" alt="Café">
+              <img src="../public/assets/images/products/cafe.jpg" alt="Café">
               <span class="product_type">Bebidas</span>
             </div>
             <span class="price">R$ 2,00</span>
@@ -371,7 +376,7 @@
               Chás
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/cha.jpg" alt="Chás">
+              <img src="../public/assets/images/products/cha.jpg" alt="Chás">
               <span class="product_type">Bebidas</span>
             </div>
             <span class="price">R$ 3,00</span>
@@ -391,7 +396,7 @@
               Milkshake
             </label>
             <div class="relative">
-              <img src="../../public/assets/images/products/milkshake.jpg" alt="Milkshake">
+              <img src="../public/assets/images/products/milkshake.jpg" alt="Milkshake">
               <span class="product_type">Bebidas</span>
             </div>
             <span class="price">R$ 8,00</span>
@@ -408,7 +413,7 @@
         <button class="next-btn" id="next">&gt;</button>
       </div>
     </fieldset>
-    <div class="form-btns">
+    <div class="form-btns-modal">
       <input type="reset" value="limpar" name="reset_order" id="reset_order">
       <input type="submit" value="salvar" name="submit_chart" id="submit_chart">
     </div>
@@ -417,8 +422,7 @@
 
 
   <rodape-alifer></rodape-alifer>
-  <script src="../../src/scripts.js" type="module"></script>
-  <script src="../../src/form/order.js" type="module"></script>
-  <script src="../../src/form/validadeForm.js"  type="module"></script>
+  <script src="../src/scripts.js" type="module"></script>
+  <script src="../src/form/order.js" type="module"></script>
 </body>
 </html>
